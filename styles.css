@@ -228,7 +228,7 @@ grid-template-columns: 100%;
 grid-template-rows: auto auto auto auto auto;
 }
 .grid-item-hijo {
-    /* border: 1px solid rgb(17, 47, 182); */
+    border: 0px solid rgb(17, 47, 182);
 }
 
 
