@@ -81,6 +81,12 @@
     font-family: 'Sriracha', cursive;
     text-align: center;
 }
+.padding5{
+    padding: 5%;
+}
+.margin5{
+    margin: 2%;
+}
 .btn {
     background-color: #00BFA6;
     padding: 14px 40px;
@@ -222,7 +228,7 @@ grid-template-columns: 100%;
 grid-template-rows: auto auto auto auto auto;
 }
 .grid-item-hijo {
-    border: 1px solid rgb(17, 47, 182);
+    /* border: 1px solid rgb(17, 47, 182); */
 }
 
 
