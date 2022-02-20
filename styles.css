@@ -3,6 +3,7 @@
     margin:  0;
     padding: 0;
 }
+#navHamburguesa{display: none;}
 
 .site__font{font-family: 'Sriracha', cursive;}
 .drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
@@ -117,7 +118,7 @@
 
 
 /* Inicio mods del header */
-.header__main{
+.header__main{  
     display: flex;
     justify-content:space-around;
     padding: 10px;
@@ -229,15 +230,13 @@ grid-template-rows: auto auto auto auto auto;
 }
 .grid-item-hijo {
     border: 0px solid rgb(17, 47, 182);
+
 }
 
 
 
 
 
-@media (max-width: 1130px) {
-.footer__maps{display: none;}
-}
 @media (max-width: 978px) {
     #headerNav{display: none;}
     #headerMenu{display: flex; max-width: 50px;padding-top: 10px;}
@@ -251,3 +250,11 @@ grid-template-rows: auto auto auto auto auto;
     .footer__font--cuerpo{font-size:calc(12px + 1vw);}
     .btn{font-size: 10px ;}
 }
+@media (max-width: 1130px) {
+    .footer__maps{display: none;}
+#navHamburguesa{display:inline;}
+#header{display: none;}
+#noticia{margin-top: 100px;}
+
+}
+
