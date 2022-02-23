@@ -2,39 +2,25 @@
 * {
     margin:  0;
     padding: 0;
+    font-family: 'Sriracha', cursive;
 }
 
 .grid-contenedor-padre{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
-    }
-    .grid-item-hijo {
-        border: 0px solid rgb(17, 47, 182);
-    
-    }
-
-.body-conteriner{
-
 }
-
-
-
-
-
-
-#navHamburguesa{display: none;}
-
-.site__font{font-family: 'Sriracha', cursive;}
+.grid-item-hijo {
+    border: 0px solid rgb(17, 47, 182);
+    
+}
 .drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
-#headerMenu{display: none;}
 .background__titulo{
     background-color: #00BFA6;
     padding: 35px 10vw;
 }
 .contenedorTitulo{margin-bottom: 130px;}
 .site__font--titulo{
-    font-family: 'Sriracha', cursive;
     font-size: 50px;
     text-align: center;
     margin-top: 110px;
@@ -44,7 +30,6 @@
     font-size: 28px;
     text-align: center;
     color: #2EA37E;
-    font-family: 'Sriracha', cursive;
     margin-top: 5px;
 }
 .site__font--subtitulo2{
@@ -66,7 +51,6 @@
 .site__font--tituloNoticia{
     display: flex;
     justify-content: space-around;
-    font-family: 'Sriracha', cursive;
     font-size:calc(22px + 2vw);
     /* font-size: 45px; */
     color: #ffff;
@@ -99,12 +83,7 @@
     border-radius: 10px;
     border: 2px dashed #5e3b06;
 }
-.footer__font--cuerpo{
-    font-size: 18px;
-    text-align: justify;
-    font-family: 'Sriracha', cursive;
-    text-align: center;
-}
+
 .padding5{
     padding: 5%;
 }
@@ -141,45 +120,51 @@
 
 
 /* Inicio mods del header */
-.header__main{  
-    display: flex;
-    justify-content:space-around;
-    padding: 10px;
-    align-items: center;
-}
-.header__navUl{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-}
-.header__logo{
-    block-size: auto;
-    display: flex;
-}
-.header__hijo{
-    display: inline-block;
-}
-.nav__menuOp{
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Sriracha';
-    font-size: large;
-    padding: 10px 30px;
-    border: 2px solid rgba(0, 0, 0, 0);
-    color: #2a3d3b;
-    
-}
-.nav__menuOp:hover{
-    /* color: #e4bf70; */
-    transition: .02s;
-    border: 2px dashed #00BFA6;
-    background-color: rgb(241, 255, 235);
-    background-color: #d0f5ef;
-    border-radius: 10px; 
 
+#body-conteiner{
+
+}
+
+
+#navMobile{display: none;}
+#navDesktop{
+    margin: 0;
+    padding: 10px;
+    header{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        div{
+            padding: 0;
+            nav{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-decoration: none;
+                    li{
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            font-size: large;
+                            padding: 10px 30px;
+                            border: 2px solid rgba(0, 0, 0, 0);
+                            color: #2a3d3b;
+                            transition: .4s;
+                            &:hover{
+                                transition: .02s;
+                                border: 2px dashed #00BFA6;
+                                background-color: #d0f5ef;
+                                border-radius: 10px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -233,7 +218,11 @@
 .footer__clicktowhatsapp:hover{cursor: pointer;}
 .footer__align{text-align: center;align-items: center; margin-bottom: 10%;}
 #newSubscription{margin: 10px;}
-
+.footer__font--cuerpo{
+    font-size: 18px;
+    text-align: justify;
+    text-align: center;
+}
 #footer__gradient{
     min-height: 100px;
     background-color: #ecac00;
@@ -265,9 +254,8 @@
 
 
 @media (max-width: 978px) {
-    #headerNav{display: none;}
-    #headerMenu{display: flex; max-width: 50px;padding-top: 10px;}
-    .header__logo{margin: 0 20px;max-width: 50vw;}
+    #navDesktop{display: none;}
+    .header__logo{margin: auto;max-width: 50vw;}
     .divto15{min-width: 38%;}
     .main__noticia-principal{min-height: 250px;}
     .site__font--titulo{font-size:calc(20px + 1.5vw);margin-top: 5%;}
@@ -281,8 +269,8 @@
 }
 @media (max-width: 1130px) {
 #map{display: none;}
-#navHamburguesa{display:inline;}
-#header{display: none;}
+#navMobile{display:inline;}
+#navDesktop{display: none;}
 #noticia{margin-top: 100px;}
 }
 

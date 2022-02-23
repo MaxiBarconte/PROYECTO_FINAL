@@ -1,7 +1,8 @@
 /* Modelos/Modificaciones aplicables a todo el sitio */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Sriracha', cursive; }
 
 .grid-contenedor-padre {
   display: grid;
@@ -11,17 +12,8 @@
 .grid-item-hijo {
   border: 0px solid #112fb6; }
 
-#navHamburguesa {
-  display: none; }
-
-.site__font {
-  font-family: 'Sriracha', cursive; }
-
 .drop {
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
-
-#headerMenu {
-  display: none; }
 
 .background__titulo {
   background-color: #00BFA6;
@@ -31,7 +23,6 @@
   margin-bottom: 130px; }
 
 .site__font--titulo {
-  font-family: 'Sriracha', cursive;
   font-size: 50px;
   text-align: center;
   margin-top: 110px;
@@ -41,7 +32,6 @@
   font-size: 28px;
   text-align: center;
   color: #2EA37E;
-  font-family: 'Sriracha', cursive;
   margin-top: 5px; }
 
 .site__font--subtitulo2 {
@@ -62,7 +52,6 @@
 .site__font--tituloNoticia {
   display: flex;
   justify-content: space-around;
-  font-family: 'Sriracha', cursive;
   font-size: calc(22px + 2vw);
   /* font-size: 45px; */
   color: #ffff;
@@ -93,12 +82,6 @@
   cursor: pointer;
   border-radius: 10px;
   border: 2px dashed #5e3b06; }
-
-.footer__font--cuerpo {
-  font-size: 18px;
-  text-align: justify;
-  font-family: 'Sriracha', cursive;
-  text-align: center; }
 
 .padding5 {
   padding: 5%; }
@@ -132,43 +115,38 @@
   /* FIN */ }
 
 /* Inicio mods del header */
-.header__main {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  align-items: center; }
+#navMobile {
+  display: none; }
 
-.header__navUl {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  text-decoration: none; }
-
-.header__logo {
-  block-size: auto;
-  display: flex; }
-
-.header__hijo {
-  display: inline-block; }
-
-.nav__menuOp {
-  display: inline-block;
-  text-decoration: none;
-  font-family: 'Sriracha';
-  font-size: large;
-  padding: 10px 30px;
-  border: 2px solid rgba(0, 0, 0, 0);
-  color: #2a3d3b; }
-
-.nav__menuOp:hover {
-  /* color: #e4bf70; */
-  transition: .02s;
-  border: 2px dashed #00BFA6;
-  background-color: #f1ffeb;
-  background-color: #d0f5ef;
-  border-radius: 10px; }
+#navDesktop {
+  margin: 0;
+  padding: 10px; }
+  #navDesktop header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    #navDesktop header div {
+      padding: 0; }
+      #navDesktop header div nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none; }
+        #navDesktop header div nav ul li a {
+          display: inline-block;
+          text-decoration: none;
+          font-size: large;
+          padding: 10px 30px;
+          border: 2px solid rgba(0, 0, 0, 0);
+          color: #2a3d3b;
+          transition: .4s; }
+          #navDesktop header div nav ul li a:hover {
+            transition: .02s;
+            border: 2px dashed #00BFA6;
+            background-color: #d0f5ef;
+            border-radius: 10px; }
 
 /* FIN mods del header */
 /* INICIO mods MAIN  */
@@ -223,6 +201,11 @@
 #newSubscription {
   margin: 10px; }
 
+.footer__font--cuerpo {
+  font-size: 18px;
+  text-align: justify;
+  text-align: center; }
+
 #footer__gradient {
   min-height: 100px;
   background-color: #ecac00;
@@ -242,14 +225,10 @@
   min-width: 50px; }
 
 @media (max-width: 978px) {
-  #headerNav {
+  #navDesktop {
     display: none; }
-  #headerMenu {
-    display: flex;
-    max-width: 50px;
-    padding-top: 10px; }
   .header__logo {
-    margin: 0 20px;
+    margin: auto;
     max-width: 50vw; }
   .divto15 {
     min-width: 38%; }
@@ -275,9 +254,9 @@
 @media (max-width: 1130px) {
   #map {
     display: none; }
-  #navHamburguesa {
+  #navMobile {
     display: inline; }
-  #header {
+  #navDesktop {
     display: none; }
   #noticia {
     margin-top: 100px; } }
