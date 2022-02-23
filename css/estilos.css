@@ -164,7 +164,7 @@
 /* FIN mods del header */
 /* INICIO mods MAIN  */
 .main__noticia-principal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/slider01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/slider01.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
