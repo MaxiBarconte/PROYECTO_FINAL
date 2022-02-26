@@ -5,8 +5,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Sriracha', cursive;
-  font-family: 'Montserrat', bold;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth; }
 
 #combo-lorem {
@@ -18,25 +17,25 @@ html {
   grid-template-rows: auto auto auto auto auto; }
 
 .btn {
-  background-color: #00BFA6;
+  background-color: #2EA37E;
   padding: 14px 40px;
-  color: #fff;
+  color: #ffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
   border-radius: 10px;
-  border: 2px dashed #00BFA6;
+  border: 2px dashed #2EA37E;
   box-shadow: rgba(49, 49, 197, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .4s;
-  font-size: calc(0.61rem + .51vw);
-  font-family: 'Exo 2', sans-serif; }
+  font-size: calc(0.61rem + .9vw);
+  font-family: "Montserrat", sans-serif; }
   .btn.span:last-child {
     display: none; }
   .btn:hover {
     transition: .02s;
-    border: 2px dashed #00BFA6;
+    border: 2px dashed #2EA37E;
     background-color: #fff;
-    color: #00BFA6; }
+    color: #2EA37E; }
   .btn:active {
     background-color: #87dbd0; }
 
@@ -68,16 +67,17 @@ html {
         align-items: center;
         text-decoration: none; }
         #navDesktop header div nav ul li a {
+          font-family: "Nunito", sans-serif;
           display: inline-block;
           text-decoration: none;
-          font-size: large;
+          font-size: calc(0.61rem + .5vw);
           padding: 10px 30px;
           border: 2px solid rgba(0, 0, 0, 0);
           color: #2a3d3b;
           transition: .4s; }
           #navDesktop header div nav ul li a:hover {
             transition: .02s;
-            border: 2px dashed #00BFA6;
+            border: 2px dashed #2EA37E;
             background-color: #d0f5ef;
             border-radius: .1rem; }
 
@@ -95,7 +95,7 @@ html {
   #noticiaPrincipal div p {
     display: flex;
     justify-content: space-around;
-    font-size: calc(1.6rem + 1.7vw);
+    font-size: calc(1.4rem + 1.7vw);
     color: #ffff;
     padding: 40px; }
   #noticiaPrincipal div form {
@@ -183,7 +183,7 @@ html {
 #conteiner__article p {
   font-size: calc(0.61rem + .9vw);
   text-align: justify;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   padding: 2vh 2vw;
   margin: 4%; }
@@ -194,7 +194,7 @@ html {
   flex-wrap: wrap; }
   .conteiner__card div div h5 {
     text-align: center;
-    font-family: 'Exo 2', sans-serif; }
+    font-family: "Montserrat", sans-serif; }
 
 .conteiner__card--propuestas p {
   position: relative;
@@ -221,8 +221,8 @@ html {
 /* INICIO mods FOOTER  */
 #footer__gradient {
   min-height: 100px;
-  background-color: #ecac00;
-  background-image: linear-gradient(0deg, #ecac00 0%, #ffffff 100%);
+  background-color: #ECAC00;
+  background-image: linear-gradient(0deg, #ECAC00 0%, #ffffff 100%);
   margin-top: 100px; }
 
 #footer {
@@ -231,7 +231,7 @@ html {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  font-size: calc(0.61rem + .51vw);
+  font-size: calc(0.61rem + .5vw);
   text-align: center; }
   #footer div {
     padding: 15px;
@@ -254,7 +254,7 @@ html {
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
 
 .background__titulo {
-  background-color: #00BFA6;
+  background-color: #2EA37E;
   padding: 35px 10vw; }
 
 @media (max-width: 978px) {

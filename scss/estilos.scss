@@ -2,13 +2,22 @@
 html{
     font-size: 62,5%;
 }
+$tipografia-sec: 'Nunito', sans-serif;
+$tipografia-prin: 'Montserrat', sans-serif;
+$fuente-normal: calc(0.61rem + 1.3vw);
+$fuente-pequena:calc(0.61rem + .9vw);
+$fuente-navDesktop:calc(0.61rem + .5vw);
+$fuente-grande: calc(1.4rem + 1.7vw);
+// $color-1:#00BFA6;
+$color-1:#2EA37E;
+$color-2:#ECAC00;
+
 * {
     margin:  0;
     padding: 0;
-    font-family: 'Sriracha', cursive;
-    font-family: 'Montserrat', bold;
+    font-family: $tipografia-prin;
     scroll-behavior: smooth;
-}
+} 
 #combo-lorem{font-size: 4rem;}
 .conteinerGrid{
     display: grid;
@@ -21,27 +30,27 @@ html{
 
 
 .btn {
-    background-color: #00BFA6;
+    background-color: $color-1;
     padding: 14px 40px;
-    color: #fff;
+    color: #ffff;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px dashed #00BFA6;
+    border: 2px dashed $color-1;
     box-shadow: rgba(49, 49, 197, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: .4s;
-    font-size:calc(0.61rem + .51vw);
-    font-family: 'Exo 2', sans-serif;
+    font-size:$fuente-pequena;
+    font-family: $tipografia-prin;
     
     &.span:last-child {
         display: none;
     }
     &:hover{
         transition: .02s;
-        border: 2px dashed #00BFA6;
+        border: 2px dashed $color-1;
         background-color: #fff;
-        color: #00BFA6;
+        color: $color-1;
     }
     &:active {
         background-color: #87dbd0;
@@ -60,7 +69,6 @@ html{
 #navDesktop{
     margin: 0;
     padding: 10px;
-
     header{
         display: flex;
         justify-content:space-around;
@@ -80,16 +88,17 @@ html{
                     text-decoration: none;
                     li{
                         a{
+                            font-family: $tipografia-sec;
                             display: inline-block;
                             text-decoration: none;
-                            font-size: large;
+                            font-size: $fuente-navDesktop;
                             padding: 10px 30px;
                             border: 2px solid rgba(0, 0, 0, 0);
                             color: #2a3d3b;
                             transition: .4s;
                             &:hover{
                                 transition: .02s;
-                                border: 2px dashed #00BFA6;
+                                border: 2px dashed $color-1;
                                 background-color: #d0f5ef;
                                 border-radius: .1rem; 
                             }
@@ -120,7 +129,7 @@ html{
         p{
             display: flex;
             justify-content: space-around;
-            font-size:calc(1.6rem + 1.7vw);
+            font-size:$fuente-grande;
             color: #ffff;
             padding: 40px;
         }
@@ -206,21 +215,21 @@ html{
 .imagen100vw{width:100%;}
 #conteiner__article{
     h2{
-        font-size:calc(1.4rem + 1.7vw);
+        font-size:$fuente-grande;
         text-align: center;
         margin-top: 110px;
         margin-bottom: 5px;
     }
     h3{
-        font-size:calc(0.61rem + 1.3vw);
+        font-size:$fuente-normal;
         text-align: center;
-        color: #2EA37E;
+        color: $color-1;
         margin-top: 5px;
     }
     p{
-        font-size:calc(0.61rem + .9vw);
+        font-size:$fuente-pequena;
         text-align: justify;
-        font-family: 'Exo 2', sans-serif;
+        font-family: $tipografia-prin;
         text-align: center;
         padding: 2vh 2vw;
         margin: 4%;
@@ -235,7 +244,7 @@ html{
     flex-wrap: wrap;
     div{
         div{
-            h5{ text-align: center;font-family: 'Exo 2', sans-serif;}
+            h5{ text-align: center;font-family: $tipografia-prin;}
         }
     }
     
@@ -267,18 +276,18 @@ html{
 
 #footer__gradient{
     min-height: 100px;
-    background-color: #ecac00;
-    background-image: linear-gradient(0deg, #ecac00 0%, #ffffff 100%);
+    background-color: $color-2;
+    background-image: linear-gradient(0deg, $color-2 0%, #ffffff 100%);
     margin-top: 100px;
 }
 
 #footer{
-    background-color: #ECAC00;
+    background-color: $color-2;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    font-size:calc(0.61rem + .51vw);
+    font-size:$fuente-navDesktop;
     text-align: center;
     div{
         padding: 15px;
@@ -311,7 +320,7 @@ html{
 .drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
 // NO SE DE DONDE SALIO LA CLASE DROP
 .background__titulo{
-    background-color: #00BFA6;
+    background-color: $color-1;
     padding: 35px 10vw;
 }
 
