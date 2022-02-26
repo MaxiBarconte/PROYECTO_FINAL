@@ -40,7 +40,7 @@ $color-2:#ECAC00;
     border: 2px dashed $color-1;
     box-shadow: rgba(49, 49, 197, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: .4s;
-    font-size:$fuente-pequena;
+    font-size:$fuente-navDesktop;
     font-family: $tipografia-prin;
     
     &.span:last-child {
@@ -132,6 +132,7 @@ $color-2:#ECAC00;
             font-size:$fuente-grande;
             color: #ffff;
             padding: 40px;
+            font-family: $tipografia-sec;
         }
         form{flex-direction: column;}
     }
@@ -307,7 +308,19 @@ $color-2:#ECAC00;
 
 
 // CLASES ID PAGINAS SECUNDARIAS
-.contenedorTitulo{margin-bottom: 130px;}
+.subpage__subtitulo{
+    height: 25vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
+    margin-bottom: 10vh;
+    p{
+    font-family: $tipografia-sec;
+    color: #fff;
+    font-size: $fuente-grande;
+    text-align: center;
+    padding-top: 18px;
+    }
+}
 .max__img_plato{
     max-width: 10%;
     min-width: 50px;
@@ -319,10 +332,6 @@ $color-2:#ECAC00;
 // NO SE DE DONDE SALIO LA CLASE DROP
 .drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
 // NO SE DE DONDE SALIO LA CLASE DROP
-.background__titulo{
-    background-color: $color-1;
-    padding: 35px 10vw;
-}
 
 
 
