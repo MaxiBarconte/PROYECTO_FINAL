@@ -58,7 +58,7 @@ html {
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
-  min-height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -116,14 +116,29 @@ html {
   animation-delay: 0.3s;
   /* animation: scroll-down 1s ease-in-out infinite; */ }
 
-.contenedor__comentario {
-  max-width: 15%;
-  margin: 15px;
-  min-width: 15%;
-  margin: 2%; }
+.conteiner__card--propuesta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .conteiner__card--propuesta div {
+    max-width: 22%;
+    margin: 15px;
+    min-width: 120px; }
+    .conteiner__card--propuesta div img {
+      z-index: -100;
+      border-radius: 10px;
+      border: 2px dashed rgba(0, 0, 0, 0);
+      padding: 0 0;
+      width: 100%; }
+      .conteiner__card--propuesta div img:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        border-radius: 10px;
+        border: 2px dashed #5e3b06;
+        border: 2px dashed #ff672a; }
 
 .conteiner__article {
-  padding-top: 5vh; }
+  padding-top: 3vh; }
   .conteiner__article h2 {
     font-size: calc(1.4rem + 1.7vw);
     text-align: center;
@@ -142,39 +157,51 @@ html {
     padding: 2vh 2vw;
     margin: 4%; }
 
-.conteiner__card {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .conteiner__card div div h5 {
+.conteiner__article--comofunciona {
+  min-height: 100vh;
+  padding: 5vh 0;
+  background-color: #477734; }
+  .conteiner__article--comofunciona h2 {
+    color: white;
+    font-size: calc(1.4rem + 1.7vw);
     text-align: center;
-    font-family: "Montserrat", sans-serif; }
+    padding-top: 50px;
+    margin-bottom: 5px; }
+  .conteiner__article--comofunciona h3 {
+    color: white;
+    font-size: calc(0.61rem + 1.3vw);
+    text-align: center;
+    color: #FF8800;
+    margin-top: 5px; }
+  .conteiner__article--comofunciona h5 {
+    font-size: calc(0.61rem + 1.3vw);
+    text-align: center;
+    color: black;
+    margin-top: 5px; }
+  .conteiner__article--comofunciona p {
+    color: white;
+    font-size: calc(0.61rem + 1.3vw);
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 2vh 2vw;
+    margin: 4%; }
 
-.conteiner__card--imagenPropuesta {
-  max-width: 22%;
-  margin: 15px;
-  min-width: 120px; }
-  .conteiner__card--imagenPropuesta img {
-    z-index: -100;
-    border-radius: 10px;
-    border: 2px dashed rgba(0, 0, 0, 0);
-    margin: 15px;
-    width: 100%; }
-    .conteiner__card--imagenPropuesta img:hover {
-      opacity: 0.5;
-      filter: alpha(opacity=50);
-      border-radius: 10px;
-      border: 2px dashed #5e3b06; }
+.card {
+  max-width: 42%; }
+  .card h5 {
+    font-family: "Nunito", sans-serif;
+    color: #FF8800;
+    font-size: calc(0.61rem + 1.3vw); }
 
-/* FIN mods MAIN  */
-/* INICIO mods FOOTER  */
-#footer__gradient {
-  min-height: 100px;
-  background-color: #FF8800;
-  background-image: linear-gradient(0deg, #FF8800 0%, #ffffff 100%);
-  margin-top: 100px; }
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px; }
 
 #footer {
+  background: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.319765) 4%, #fcb045 25%, #ff672a 100%);
   background-color: #FF8800;
   display: flex;
   justify-content: space-around;
@@ -193,7 +220,7 @@ html {
   height: 25vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
-  margin-bottom: 15%; }
+  margin-bottom: 10%; }
   .subpage__subtitulo p {
     font-family: "Nunito", sans-serif;
     color: #fff;
@@ -223,7 +250,8 @@ html {
 .pagePlatos__card {
   max-width: 22%;
   min-width: 22%;
-  padding: 0; }
+  padding: 0;
+  margin: 0 3%; }
 
 #pageContacto__cuerpo {
   display: flex;
@@ -327,31 +355,13 @@ html {
   background-color: #f7f5ec; }
 
 @media (max-width: 978px) {
-  #navDesktop {
-    display: none; }
-  .nav_logo {
-    margin: auto;
-    max-width: 50vw; }
-  .divto15 {
-    min-width: 10rem;
-    width: 20%; }
-  .main__noticia-principal {
-    min-height: 250px; }
   .btn {
     font-size: 10px; }
   #map {
-    display: none; }
-  #visibilityNavMobile {
-    display: inline; } }
+    display: none; } }
 
 @media (max-width: 1130px) {
   #map {
-    display: none; }
-  #visibilityNavMobile {
-    display: inline; }
-  #navMobile {
-    display: inline; }
-  #navDesktop {
     display: none; } }
 
 @keyframes scroll-down {
