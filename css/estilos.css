@@ -153,9 +153,7 @@ html {
     font-size: calc(0.61rem + .9vw);
     text-align: justify;
     font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding: 2vh 2vw;
-    margin: 4%; }
+    text-align: center; }
 
 .conteiner__article--comofunciona {
   min-height: 100vh;
@@ -188,7 +186,13 @@ html {
     margin: 4%; }
 
 .card {
-  max-width: 42%; }
+  max-width: 42%;
+  max-width: 20%;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  overflow: auto; }
   .card h5 {
     font-family: "Nunito", sans-serif;
     color: #FF8800;
@@ -362,7 +366,13 @@ html {
 
 @media (max-width: 1130px) {
   #map {
-    display: none; } }
+    display: none; }
+  #noticiaPrincipal {
+    min-height: 73vh; }
+  .our-team {
+    margin: 8%; }
+  .card {
+    max-width: 42%; } }
 
 @keyframes scroll-down {
   0% {
