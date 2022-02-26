@@ -12,79 +12,62 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200&family=Nunito:ital@1&display=swap" rel="stylesheet">
 </head>
-<body class="conteinerGrid">
-	<section id="navDesktop">
-		<header>
-			<div >
-				<a  href="../index.html"><img src="../assets/logo300x150.png" alt="KINOWA LOGO"></a>	
-			</div>
-			<div>
-				<nav>
-					<ul>
-						<li><a  href="../index.html">INICIO</a></li>
-						<li><a  href="../pages/combos.html">NUESTROS COMBOS</a></li>
-						<li><a  href="../pages/platos_individuales.html">PLATOS INDIVIDUALES</a></li>
-						<li><a  href="../pages/nosotros.html">PORQUÉ ELEGIRNOS</a></li>
-						<li><a  href="../pages/beneficios.html">BENEFICIOS</a></li>
-						<li><a  href="../pages/contacto.html">CONTACTO</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div>
-				<a href="https://treinta.shop/kinowa"target="_blank"><img src="../assets/shopping-cart.png" height="55" alt="icono carrito shop"></a>
-			</div>
-		</header>
-	</section>
+<body>
 
-	<div id="visibilityNavMobile">
-		<nav id="navMobile" class="navbar navbar-light bg-light fixed-top">
-			<div class="container-fluid">
-				<a  href="../index.html"><img class="nav_logo" src="../assets/logo 200x100.svg" alt="KINOWA LOGO"></a>	
-				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light nav__modificaciones">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../index.html">
+				<img src="../assets/logo300x150.png" alt="" width="200" height="100">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">MAS SOBRE NOSOTROS</h5>
-					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<ul>
-						<li><a href="../index.html">INICIO</a></li>
-						<li><a href="../pages/combos.html">NUESTROS COMBOS</a></li>
-						<li><a href="../pages/platos_individuales.html">PLATOS INDIVIDUALES</a></li>
-						<li><a href="../pages/nosotros.html">PORQUÉ ELEGIRNOS</a></li>
-						<li><a href="../pages/beneficios.html">BENEFICIOS</a></li>
-						<li><a href="../pages/contacto.html">CONTACTO</a></li>
-					</ul>
-				</div>
-				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="../pages/combos.html">COMO FUNCIONA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="../pages/platos_individuales.html">PLATOS INDIVIDUALES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="../pages/nosotros.html">PORQUÉ ELEGIRNOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="../pages/beneficios.html">BENEFICIOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="../pages/contacto.html">CONTACTO</a>
+					</li>
+				</ul>
+				<a href="https://treinta.shop/kinowa" target="_blank"><img src="../assets/shopping-cart.png"
+					height="55" alt="icono carrito shop"></a>
 			</div>
-		</nav>
-	</div>
+		</div>
+	</nav>
 
-	<!-- fin header logo + nav -->
-
-	<!-- SUBTITULO -->	
+	<main>
 		<div class="subpage__subtitulo">
 			<p>BENEFICIOS</p>
+			<h2>En Kinowa queremos que puedas cuidarte fácilmente independientemente del ritmo de vida que tengas. PODRAS BENEFICIARTE CON:</h2>
 		</div>
+		<section class="pageBeneficios__cuerpo">
+			<div><img src="../assets/icon/idea-genial.png" alt="icon1"><p>Con nuestros menús recibes un calendario para realizar todas las comidas del día correctamente. </p></div>
+			<div><img src="../assets/icon/plato.png" alt="icon1"><p>Recibe las comidas de tus menús ya cocinadas y olvídate de comprar los ingredientes de tus platos. </p></div>
+			<div><img src="../assets/icon/panadero.png" alt="icon1"><p>Cocinamos por ti. No tienes que cocinar cada día ni dedicar tu fin de semana a hacer batchcooking. </p></div>
+			<div><img src="../assets/icon/lista-de-verificacion.png" alt="icon1"><p>Nuestros platos están perfectamente calibrados para que no tengas que preocuparte por las recetas. </p></div>
+			<div><img src="../assets/icon/cosecha.png" alt="icon1"><p>Nuestro sistema de intercambios te ayuda a mantener un balace equilibrado de nutrientes y calorías. </p></div>
+			<div><img src="../assets/icon/temporizador.png" alt="icon1"><p>Además del tiempo de cocinado, ahorras el tiempo que dedicas a limpiar la cocina y los cacharros. </p></div>
+			<div><img src="../assets/icon/icon-microondas.png" alt="icon1"><p>Sustituirás un montón de horas de vitrocerámica y de horno por menos de 5 minutos de microondas. </p></div>
+			<div><img src="../assets/icon/caja-de-almuerzo.png" alt="icon1"><p>Nuestras raciones contienen la cantidad justa de comida para no desperdicies alimentos. </p></div>
 
-
-
-	<!-- Inicio main -->
-	<section class="grid-item-hijo">
-		<main>
-
-			<section class="cuerpoBeneficios">		
-				<div><img src="../assets/icon/icon-chef.png" alt="icon1"><p class="site__font--cuerpo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, nulla ad repellendus repellat aperiam quaerat voluptate porro nihil quod, pariatur dolorum beatae reiciendis laudantium doloremque, ipsam excepturi rem at placeat!</p></div>
-				<div><img src="../assets/icon/cosecha.png" alt="icon2"><p class="site__font--cuerpo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam exercitationem reprehenderit voluptatum, magnam ut temporibus, nam, libero excepturi natus unde! Consequatur a cumque repellendus sed exercitationem harum, earum suscipit?</p></div>
-				<div><img src="../assets/icon/vegano.png" alt="icon3"><p class="site__font--cuerpo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam exercitationem reprehenderit voluptatum, magnam ut temporibus, nam, libero excepturi natus unde! Consequatur a cumque repellendus sed exercitationem harum, earum suscipit?</p></div>
-				<div><img src="../assets/icon/icon-ayudante.png" alt="icon4"><p class="site__font--cuerpo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam exercitationem reprehenderit voluptatum, magnam ut temporibus, nam, libero excepturi natus unde! Consequatur a cumque repellendus sed exercitationem harum, earum suscipit?</p></div>
-			</section>
-			
-			</main>
-	</section>
+		</section>		
+	</main>
 
 
 
@@ -92,38 +75,38 @@
 
 
 	<!-- inicio footer --> 
+	<!-- ESTE DIV SE ELIMINARA -->
+	<div id="footer__gradient"></div> 
+	<!-- ESTE DIV SE ELIMINARA -->
 
-	<section>
-		<div id="footer__gradient"></div>
-		<footer id="footer">
+
+	<footer id="footer">
+		<div>
+			<a href="../index.html"><img src="../assets/logo contraste3 200x100.png" alt="KINOWA LOGO"></a>			
+			<p>S.S. de Jujuy, Jujuy, Argentina</p>
+		</div>
+		<section>
 			<div>
-				<a href="../index.html"><img src="../assets/logo contraste3 200x100.png" alt="KINOWA LOGO"></a>			
-				<p>S.S. de Jujuy, Jujuy, Argentina</p>
+				<p>HACE TU PEDIDO <br>HACIENDO CLICK ACA</p>
+					<a class="btn" href="https://api.whatsapp.com/send?phone=+543885001000&text=Hola!!%20Quiero%20hacer%20un%20pedido%F0%9F%A5%97%20%20mi%20nombre%20es" target="_blank">Link directo a whatsapp</a>
+				<p>Lunes a viernes de 9 a 16:30 h</p>
 			</div>
-			<section>
-				<div>
-					<p>HACE TU PEDIDO <br>HACIENDO CLICK ACA</p>
-						<a class="btn" href="https://api.whatsapp.com/send?phone=+543885001000&text=Hola!!%20Quiero%20hacer%20un%20pedido%F0%9F%A5%97%20%20mi%20nombre%20es" target="_blank">Link directo a whatsapp</a>
-					<p>Lunes a viernes de 9 a 16:30 h</p>
-				</div>
-				<div>
-					<form>
-						<label for="newSubscription">
-							<p>QUERES PARTICIPAR DE SORTEOS Y </p>
-							<p>SABER NUESTRAS PROMOCIONES?: </p>
-							<input type="text" name="newSubscription" placeholder="Ingresa tu telefono" required/>
-							<input class="btn" type="submit">
-						</label>	
-					</form>
-				</div>
-			</section>
-			<div id="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.5652230215846!2d-65.30178084927576!3d-24.18697618429934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f43645d08b1%3A0xd23d3109983e1f9f!2sCentro%20Jujuy!5e0!3m2!1ses-419!2sar!4v1643770526360!5m2!1ses-419!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<div>
+				<form>
+					<label for="newSubscription">
+						<p>QUERES PARTICIPAR DE SORTEOS Y </p>
+						<p>SABER NUESTRAS PROMOCIONES?: </p>
+						<input type="text" name="newSubscription" placeholder="Ingresa tu telefono" required/>
+						<input class="btn" type="submit">
+					</label>	
+				</form>
 			</div>
-		</footer>
-	</section>
+		</section>
+		<div id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.5652230215846!2d-65.30178084927576!3d-24.18697618429934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f43645d08b1%3A0xd23d3109983e1f9f!2sCentro%20Jujuy!5e0!3m2!1ses-419!2sar!4v1643770526360!5m2!1ses-419!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	</footer>
 	<!-- fin footer -->
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
