@@ -220,6 +220,11 @@ html {
   .pageBeneficios__cuerpo div p {
     font-size: calc(0.61rem + 1.3vw); }
 
+.pagePlatos__card {
+  max-width: 22%;
+  min-width: 22%;
+  padding: 0; }
+
 #pageContacto__cuerpo {
   display: flex;
   align-items: center;

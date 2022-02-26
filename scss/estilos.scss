@@ -290,10 +290,15 @@ $color-2:#FF8800;
     display: flex;
     flex-direction: column;
     div{
+      
         img{max-width: 100px;}
         p{font-size: $fuente-normal;}
     }
     
+}
+.pagePlatos__card{
+    max-width: 22%; min-width: 22%;
+    padding: 0;
 }
 #pageContacto__cuerpo{
     display: flex;
