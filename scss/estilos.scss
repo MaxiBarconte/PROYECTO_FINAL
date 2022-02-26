@@ -15,34 +15,7 @@ html{
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
 }
-.section100vh{
-    min-height: 100vh;
-    width: 100%;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-}
-.drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
-.background__titulo{
-    background-color: #00BFA6;
-    padding: 35px 10vw;
-}
-.contenedorTitulo{margin-bottom: 130px;}
 
-
-
-
-.divto22{
-    max-width: 22%;
-    margin: 15px;
-    min-width: 120px;
-}
-.divto15{
-    max-width: 15%;
-    margin: 15px;
-    min-width: 15%;
-    margin: 2%;
-}
 
 
 
@@ -81,9 +54,9 @@ html{
 
 
 
-ICIO NAVBAR
+// IniCIO NAVBAR
 #visibilityNavMobile{display: none;}
-#navMobile{display: none;}
+#navMobile{display: none;img{padding: 10px;}}
 #navDesktop{
     margin: 0;
     padding: 10px;
@@ -154,16 +127,14 @@ ICIO NAVBAR
         form{flex-direction: column;}
     }
 }
-
-
-
-
-
-
-
-
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#nuestrasPropuestas{padding-top: 5vh;}
 #goDown{
-    // min-height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -177,7 +148,7 @@ ICIO NAVBAR
             left: 50%;
             bottom: 20px;
             border-radius: 50px;
-            cursor: pointer;
+            cursor: pointer; 
             // ::before,::after{
             //     content: "";
             //     position: absolute;
@@ -230,7 +201,9 @@ ICIO NAVBAR
     /* animation: scroll-down 1s ease-in-out infinite; */
 }
 
-
+#conteinerFirstSection{min-height: 100vh;width: 100%;padding-bottom: 50px;}
+.divto15{max-width: 15%;margin: 15px;min-width: 15%;margin: 2%;}
+.imagen100vw{width:100%;}
 #conteiner__article{
     h2{
         font-size:calc(1.4rem + 1.7vw);
@@ -256,9 +229,6 @@ ICIO NAVBAR
 
 }
 
-.imagen100vw{
-    width:100%;
-}
 .conteiner__card{
     display: flex;
     justify-content: center;
@@ -271,7 +241,14 @@ ICIO NAVBAR
     
 }
 .conteiner__card--propuestas{
+    p{
+        position:relative;
+        top: 0%;
+    }
+    div{max-width: 22%;margin: 15px;min-width: 120px;}
     img{
+        z-index: -100;
+
         border-radius:10px;
         border: 2px dashed rgba(0, 0, 0, 0);
         margin: 15px;
@@ -313,19 +290,30 @@ ICIO NAVBAR
 
 /* FIN mods FOOTER  */
 
-.gridCuerpoPagina{
-    display: grid;
+
+
+
+
+
+
+
+// CLASES ID PAGINAS SECUNDARIAS
+.contenedorTitulo{margin-bottom: 130px;}
+.max__img_plato{
+    max-width: 10%;
+    min-width: 50px;
 }
 .cuerpoBeneficios img{
     max-width: 10%;
     min-width: 100px;
 }
-.max__img_plato{
-    max-width: 10%;
-    min-width: 50px;
+// NO SE DE DONDE SALIO LA CLASE DROP
+.drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
+// NO SE DE DONDE SALIO LA CLASE DROP
+.background__titulo{
+    background-color: #00BFA6;
+    padding: 35px 10vw;
 }
-
-
 
 
 
@@ -338,11 +326,12 @@ ICIO NAVBAR
     .divto15{min-width: 10rem;width: 20%;}
     .main__noticia-principal{min-height: 250px;}
     .btn{font-size: 10px ;}
-    #map{display: none;} 
-
+    #map{display: none;}
+    #visibilityNavMobile{display: inline;}
 }
 @media (max-width: 1130px) {
 #map{display: none;}
+#visibilityNavMobile{display: inline;}
 #navMobile{display:inline;}
 #navDesktop{display: none;}
 #noticiaPrincipal{margin-top: 100px;}

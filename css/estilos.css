@@ -17,31 +17,6 @@ html {
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto; }
 
-.section100vh {
-  min-height: 100vh;
-  width: 100%; }
-
-.drop {
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
-
-.background__titulo {
-  background-color: #00BFA6;
-  padding: 35px 10vw; }
-
-.contenedorTitulo {
-  margin-bottom: 130px; }
-
-.divto22 {
-  max-width: 22%;
-  margin: 15px;
-  min-width: 120px; }
-
-.divto15 {
-  max-width: 15%;
-  margin: 15px;
-  min-width: 15%;
-  margin: 2%; }
-
 .btn {
   background-color: #00BFA6;
   padding: 14px 40px;
@@ -66,12 +41,13 @@ html {
     background-color: #87dbd0; }
 
 /* Inicio mods del header */
-ICIO NAVBAR
 #visibilityNavMobile {
   display: none; }
 
 #navMobile {
   display: none; }
+  #navMobile img {
+    padding: 10px; }
 
 #navDesktop {
   margin: 0;
@@ -125,6 +101,15 @@ ICIO NAVBAR
   #noticiaPrincipal div form {
     flex-direction: column; }
 
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#nuestrasPropuestas {
+  padding-top: 5vh; }
+
 #goDown {
   width: 100%;
   display: flex;
@@ -169,6 +154,20 @@ ICIO NAVBAR
   animation-delay: 0.3s;
   /* animation: scroll-down 1s ease-in-out infinite; */ }
 
+#conteinerFirstSection {
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 50px; }
+
+.divto15 {
+  max-width: 15%;
+  margin: 15px;
+  min-width: 15%;
+  margin: 2%; }
+
+.imagen100vw {
+  width: 100%; }
+
 #conteiner__article h2 {
   font-size: calc(1.4rem + 1.7vw);
   text-align: center;
@@ -189,9 +188,6 @@ ICIO NAVBAR
   padding: 2vh 2vw;
   margin: 4%; }
 
-.imagen100vw {
-  width: 100%; }
-
 .conteiner__card {
   display: flex;
   justify-content: center;
@@ -200,7 +196,17 @@ ICIO NAVBAR
     text-align: center;
     font-family: 'Exo 2', sans-serif; }
 
+.conteiner__card--propuestas p {
+  position: relative;
+  top: 0%; }
+
+.conteiner__card--propuestas div {
+  max-width: 22%;
+  margin: 15px;
+  min-width: 120px; }
+
 .conteiner__card--propuestas img {
+  z-index: -100;
   border-radius: 10px;
   border: 2px dashed rgba(0, 0, 0, 0);
   margin: 15px;
@@ -233,16 +239,23 @@ ICIO NAVBAR
     margin: auto; }
 
 /* FIN mods FOOTER  */
-.gridCuerpoPagina {
-  display: grid; }
+.contenedorTitulo {
+  margin-bottom: 130px; }
+
+.max__img_plato {
+  max-width: 10%;
+  min-width: 50px; }
 
 .cuerpoBeneficios img {
   max-width: 10%;
   min-width: 100px; }
 
-.max__img_plato {
-  max-width: 10%;
-  min-width: 50px; }
+.drop {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
+
+.background__titulo {
+  background-color: #00BFA6;
+  padding: 35px 10vw; }
 
 @media (max-width: 978px) {
   #navDesktop {
@@ -258,11 +271,15 @@ ICIO NAVBAR
   .btn {
     font-size: 10px; }
   #map {
-    display: none; } }
+    display: none; }
+  #visibilityNavMobile {
+    display: inline; } }
 
 @media (max-width: 1130px) {
   #map {
     display: none; }
+  #visibilityNavMobile {
+    display: inline; }
   #navMobile {
     display: inline; }
   #navDesktop {
