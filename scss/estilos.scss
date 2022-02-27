@@ -75,7 +75,13 @@ $color-2:#FF8800;
     }
 }
 
-
+.btn__irTienda{
+    @extend .btn;
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    text-decoration: none;
+}
 /* Inicio mods del header */
 
 
@@ -418,12 +424,21 @@ margin-bottom: 10%;
 @media (max-width: 978px) {
     .btn{font-size: 10px ;}
     #map{display: none;}
+    #goDown{a{div{left: 49%;}}}
 }
 @media (max-width: 1130px) {
     #map{display: none;}
-    #noticiaPrincipal{min-height: 73vh;}
+    #noticiaPrincipal{min-height: 100%;}
     .our-team{margin: 8%;}
     .card{max-width: 42%;}
+    #goDown{a{div{left: 47%;bottom: 46%;}}}
+
+}
+
+@media (max-width: 1560px) {
+    #noticiaPrincipal{min-height: 70vh;}
+
+    #goDown{a{div{left: 49%;}}}
 }
 
 @keyframes scroll-down {

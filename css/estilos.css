@@ -29,7 +29,7 @@ html {
     margin-top: 0px;
     margin-bottom: 0%; }
 
-.btn {
+.btn, .btn__irTienda {
   background-color: #2EA37E;
   padding: 14px 40px;
   color: #ffff;
@@ -42,15 +42,21 @@ html {
   transition: .4s;
   font-size: calc(0.61rem + .5vw);
   font-family: "Montserrat", sans-serif; }
-  .btn.span:last-child {
+  .btn.span:last-child, .span.btn__irTienda:last-child {
     display: none; }
-  .btn:hover {
+  .btn:hover, .btn__irTienda:hover {
     transition: .02s;
     border: 2px dashed #2EA37E;
     background-color: #fff;
     color: #2EA37E; }
-  .btn:active {
+  .btn:active, .btn__irTienda:active {
     background-color: #87dbd0; }
+
+.btn__irTienda {
+  display: flex;
+  margin: 5%;
+  justify-content: center;
+  text-decoration: none; }
 
 /* Inicio mods del header */
 .nav__modificaciones div div {
@@ -328,20 +334,31 @@ html {
   text-transform: capitalize; }
 
 @media (max-width: 978px) {
-  .btn {
+  .btn, .btn__irTienda {
     font-size: 10px; }
   #map {
-    display: none; } }
+    display: none; }
+  #goDown a div {
+    left: 49%; } }
 
 @media (max-width: 1130px) {
   #map {
     display: none; }
   #noticiaPrincipal {
-    min-height: 73vh; }
+    min-height: 100%; }
   .our-team {
     margin: 8%; }
   .card {
-    max-width: 42%; } }
+    max-width: 42%; }
+  #goDown a div {
+    left: 47%;
+    bottom: 46%; } }
+
+@media (max-width: 1560px) {
+  #noticiaPrincipal {
+    min-height: 70vh; }
+  #goDown a div {
+    left: 49%; } }
 
 @keyframes scroll-down {
   0% {
