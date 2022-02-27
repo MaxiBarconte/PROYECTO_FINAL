@@ -8,6 +8,27 @@ html {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth; }
 
+.conteiner__article, .conteiner__article--propuestas {
+  padding-top: 3vh; }
+  .conteiner__article h2, .conteiner__article--propuestas h2 {
+    font-size: calc(1.4rem + 1.7vw);
+    color: black;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 5px; }
+  .conteiner__article h3, .conteiner__article--propuestas h3 {
+    font-size: calc(0.61rem + 1.3vw);
+    color: #2EA37E;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 3%; }
+  .conteiner__article p, .conteiner__article--propuestas p {
+    font-size: calc(0.61rem + .9vw);
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0%; }
+
 .btn {
   background-color: #2EA37E;
   padding: 14px 40px;
@@ -62,6 +83,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  #noticiaPrincipal h1 {
+    font-size: calc(1.4rem + 1.7vw);
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%; }
   #noticiaPrincipal div p {
     display: flex;
     justify-content: space-around;
@@ -82,39 +109,25 @@ html {
     width: 30px;
     border: 2px solid black;
     position: absolute;
-    left: 50%;
+    left: 49%;
     bottom: 20px;
     border-radius: 50px;
     cursor: pointer; }
-
-.scroll-down {
-  height: 50px;
-  width: 30px;
-  border: 2px solid black;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  border-radius: 50px;
-  cursor: pointer; }
-
-.scroll-down::before,
-.scroll-down::after {
-  content: "";
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  height: 10px;
-  width: 10px;
-  transform: translate(-50%, -100%) rotate(45deg);
-  border: 2px solid black;
-  border-top: transparent;
-  border-left: transparent;
-  animation: scroll-down 1s ease-in-out infinite; }
-
-.scroll-down::before {
-  top: 30%;
-  animation-delay: 0.3s;
-  /* animation: scroll-down 1s ease-in-out infinite; */ }
+    #goDown a div::before, #goDown a div::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      height: 10px;
+      width: 10px;
+      transform: translate(-50%, -100%) rotate(45deg);
+      border: 2px solid black;
+      border-top: transparent;
+      border-left: transparent;
+      animation: scroll-down 1s ease-in-out infinite; }
+      #goDown a div::before::before, #goDown a div::after::before {
+        top: 30%;
+        animation-delay: 0.3s; }
 
 .conteiner__card--propuesta {
   display: flex;
@@ -137,23 +150,8 @@ html {
         border: 2px dashed #5e3b06;
         border: 2px dashed #ff672a; }
 
-.conteiner__article {
-  padding-top: 3vh; }
-  .conteiner__article h2 {
-    font-size: calc(1.4rem + 1.7vw);
-    text-align: center;
-    margin-top: 110px;
-    margin-bottom: 5px; }
-  .conteiner__article h3 {
-    font-size: calc(0.61rem + 1.3vw);
-    text-align: center;
-    color: #2EA37E;
-    margin-top: 5px; }
-  .conteiner__article p {
-    font-size: calc(0.61rem + .9vw);
-    text-align: justify;
-    font-family: "Montserrat", sans-serif;
-    text-align: center; }
+.conteiner__article--propuestas {
+  margin-bottom: 10%; }
 
 .conteiner__article--comofunciona {
   min-height: 100vh;
@@ -188,7 +186,6 @@ html {
 .card {
   max-width: 42%;
   max-width: 20%;
-  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
   margin: auto;
@@ -330,34 +327,6 @@ html {
   color: #4e5052;
   text-transform: capitalize; }
 
-.our-team .social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: #1369ce;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  transition: all 0.5s ease 0s; }
-
-.our-team:hover .social {
-  bottom: 0; }
-
-.our-team .social li {
-  display: inline-block; }
-
-.our-team .social li a {
-  display: block;
-  padding: 10px;
-  font-size: 17px;
-  color: white;
-  transition: all 0.3s ease 0s;
-  text-decoration: none; }
-
-.our-team .social li a:hover {
-  color: #1369ce;
-  background-color: #f7f5ec; }
-
 @media (max-width: 978px) {
   .btn {
     font-size: 10px; }
@@ -376,7 +345,6 @@ html {
 
 @keyframes scroll-down {
   0% {
-    /* top:20%; */
     opacity: 0; }
   30% {
     opacity: 1; }

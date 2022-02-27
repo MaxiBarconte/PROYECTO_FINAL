@@ -2,17 +2,32 @@
 html{
     font-size: 62,5%;
 }
-$tipografia-sec: 'Nunito', sans-serif;
+$tamanioFuentes:(
+    xs:calc(0.61rem + .5vw),
+    s:calc(0.61rem + .9vw),
+    n:calc(0.61rem + 1.3vw),
+    b: calc(1.4rem + 1.7vw)
+);
+
+
 $tipografia-prin: 'Montserrat', sans-serif;
-$fuente-normal: calc(0.61rem + 1.3vw);
-$fuente-pequena:calc(0.61rem + .9vw);
-$fuente-navDesktop:calc(0.61rem + .5vw);
-$fuente-grande: calc(1.4rem + 1.7vw);
-// $color-1:#00BFA6;
+$tipografia-sec: 'Nunito', sans-serif;
+$fuente-normal: map-get($tamanioFuentes, n);
+$fuente-pequena: map-get($tamanioFuentes, s);
+$fuente-navDesktop: map-get($tamanioFuentes, xs);
+$fuente-grande: map-get($tamanioFuentes, b);
+
 $color-1:#2EA37E;
-// $color-2:#ECAC00;
-// $color-2:#fa9c31fb;
 $color-2:#FF8800;
+
+
+@mixin configTexto($fontSize,$color,$textAlign,$marginUp,$marginDown){
+    font-size: $fontSize;
+    color: $color;
+    text-align: $textAlign;
+    margin-top: $marginUp;
+    margin-bottom: $marginDown;
+}
 
 * {
     margin:  0;
@@ -21,6 +36,18 @@ $color-2:#FF8800;
     scroll-behavior: smooth;
 } 
 
+.conteiner__article{
+    padding-top: 3vh;
+    h2{
+        @include configTexto($fuente-grande, black, center, 110px, 5px);
+    }
+    h3{
+        @include configTexto($fuente-normal, $color-1, center, 5px, 3%);
+    }
+    p{
+        @include configTexto($fuente-pequena, black, center, 0px, 0%);
+    }
+}
 .btn {
     background-color: $color-1;
     padding: 14px 40px;
@@ -95,7 +122,9 @@ $color-2:#FF8800;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // padding-bottom: 250px;
+    h1{
+        @include configTexto($fuente-grande, rgb(255, 255, 255), center, 10%, 10%);
+    }
     div{
         p{
             display: flex;
@@ -121,63 +150,32 @@ $color-2:#FF8800;
             width: 30px;
             border: 2px solid black;
             position: absolute;
-            left: 50%;
+            left: 49%;
             bottom: 20px;
             border-radius: 50px;
             cursor: pointer; 
-            // ::before,::after{
-            //     content: "";
-            //     position: absolute;
-            //     top: 20%;
-            //     left: 50%;
-            //     height: 10px;
-            //     width: 10px;
-            //     transform: translate(-50%, -100%) rotate(45deg);
-            //     border: 2px solid black;
-            //     border-top: transparent;
-            //     border-left: transparent;
-            //     animation: scroll-down 1s ease-in-out infinite;
-            //     ::before{
-            //         top: 30%;
-            //         animation-delay: 0.3s;
-            //     }    
-            // }
-
-            //no me funciona con anidacion no se cual es el error
+            &::before,&::after{
+                content: "";
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                height: 10px;
+                width: 10px;
+                transform: translate(-50%, -100%) rotate(45deg);
+                border: 2px solid black;
+                border-top: transparent;
+                border-left: transparent;
+                animation: scroll-down 1s ease-in-out infinite;
+                &::before{
+                    top: 30%;
+                    animation-delay: 0.3s;
+                }    
+            }
         }
     }
-    
 }
 
-.scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-.scroll-down::before,
-.scroll-down::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
-}
-.scroll-down::before {
-    top: 30%;
-    animation-delay: 0.3s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
-}
+
 .conteiner__card--propuesta{
     display: flex;
     justify-content: center;
@@ -202,29 +200,15 @@ $color-2:#FF8800;
     }  
 }
 
-.conteiner__article{
-    padding-top: 3vh;
-    h2{
-        font-size:$fuente-grande;
-        text-align: center;
-        margin-top: 110px;
-        margin-bottom: 5px;
-    }
-    h3{
-        font-size:$fuente-normal;
-        text-align: center;
-        color: $color-1;
-        margin-top: 5px;
-    }
-    p{
-        font-size:$fuente-pequena;
-        text-align: justify;
-        font-family: $tipografia-prin;
-        text-align: center;
-        // padding: 2vh 2vw;
-        // margin: 4%;
-    }
+
+
+.conteiner__article--propuestas{
+@extend .conteiner__article;
+margin-bottom: 10%;
 }
+
+
+
 .conteiner__article--comofunciona{
     min-height: 100vh;
     padding: 5vh 0;
@@ -260,13 +244,9 @@ $color-2:#FF8800;
     }
 }
 .card{
-    // margin: 5%;
     max-width: 42%;
     h5{font-family: $tipografia-sec;color: $color-2;font-size: $fuente-normal;}
-    // border: 1px solid black;
-
     max-width: 20%;
-    /* justify-content: space-between; */
     align-items: center;
     flex-direction: column;
     margin: auto;
@@ -278,17 +258,6 @@ $color-2:#FF8800;
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -441,38 +410,7 @@ $color-2:#FF8800;
   text-transform: capitalize;
 }
 
-.our-team .social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: #1369ce;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  transition: all 0.5s ease 0s;
-}
 
-.our-team:hover .social {
-  bottom: 0;
-}
-
-.our-team .social li {
-  display: inline-block;
-}
-
-.our-team .social li a {
-  display: block;
-  padding: 10px;
-  font-size: 17px;
-  color: white;
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
-}
-
-.our-team .social li a:hover {
-  color: #1369ce;
-  background-color: #f7f5ec;
-}
 
 
 
@@ -489,7 +427,7 @@ $color-2:#FF8800;
 }
 
 @keyframes scroll-down {
-    0% {/* top:20%; */opacity: 0;}
+    0% {opacity: 0;}
     30% {opacity: 1;}
     60% {opacity: 1;}
     100% {top: 90%;opacity: 0;}
