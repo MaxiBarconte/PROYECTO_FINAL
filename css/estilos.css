@@ -248,11 +248,18 @@ html {
   padding: 0 10%;
   max-width: 100%;
   display: flex;
-  flex-direction: column; }
-  .pageBeneficios__cuerpo div img {
-    max-width: 100px; }
-  .pageBeneficios__cuerpo div p {
-    font-size: calc(0.61rem + 1.3vw); }
+  flex-direction: column;
+  margin-bottom: 100px; }
+  .pageBeneficios__cuerpo h2 {
+    font-weight: bold; }
+  .pageBeneficios__cuerpo div {
+    display: inline-flex;
+    margin: 40px 0; }
+    .pageBeneficios__cuerpo div img {
+      max-width: 100px;
+      margin-right: 20px; }
+    .pageBeneficios__cuerpo div p {
+      font-size: calc(0.61rem + 1.3vw); }
 
 .pagePlatos__card {
   display: inline-flex;
