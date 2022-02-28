@@ -227,7 +227,7 @@ html {
   height: 25vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
-  margin-bottom: 10%; }
+  margin-bottom: 8%; }
   .subpage__subtitulo p {
     font-family: "Nunito", sans-serif;
     color: #fff;
@@ -279,12 +279,24 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column; }
+  #pageContacto__cuerpo h2 {
+    font-size: calc(0.61rem + 1.3vw);
+    font-weight: bold; }
+  #pageContacto__cuerpo div {
+    margin: 5%; }
 
 #pageComoFunciona__cuerpo {
   display: flex; }
   #pageComoFunciona__cuerpo div {
     align-items: center;
     justify-content: center; }
+
+#pageContacto__redessociales {
+  display: inline-flex;
+  flex-direction: row;
+  width: 150px;
+  height: 100px;
+  border: 2px solid black; }
 
 .our-team {
   padding: 30px 0 40px;

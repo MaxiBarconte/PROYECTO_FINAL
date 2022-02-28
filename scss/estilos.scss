@@ -203,9 +203,48 @@ $color-2:#FF8800;
                 border: 2px dashed rgba(255,103,42,1);
             }
         }
-    }  
+    }
 }
-
+// .test{
+//     div{      
+//     max-width: 22%;
+//     margin: 15px;
+//     min-width: 120px;
+//     height: 22vw;
+//     border-radius:10px;
+//     border: 2px solid rgba(2, 0, 0, 0);
+//     padding: 0 0;
+//     width: 100%;
+//     overflow: hidden;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-image: url(../assets/prod/img_plato.jpg);
+//     background-size: cover;
+//     transition: .5s;
+//     box-sizing: border-box;
+//     &:hover{
+//         p{top: 0%;
+//         }
+//         border-radius: 10px;
+//         border: 2px dashed rgba(255,103,42,1);
+//     }
+//     p{
+//         color: white;
+//         width: 100%;
+//         height: 100%;
+//         position: relative;
+//         top: 110%;
+//         font-size: $fuente-normal;
+//         background: rgba(#000,.38);
+//         padding: .1rem;
+//         display: flex;
+//         box-sizing: border-box;
+//         align-items: center;
+//         justify-content: center;
+//     }
+//     }
+// }
 
 
 .conteiner__article--propuestas{
@@ -298,7 +337,7 @@ margin-bottom: 10%;
     height: 25vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     p{
     font-family: $tipografia-sec;
     color: #fff;
@@ -340,6 +379,8 @@ margin-bottom: 10%;
     padding-top: 5%;}
 }
 #pageContacto__cuerpo{
+    h2{font-size: $fuente-normal;font-weight: bold;}
+    div{margin: 5%;}
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,8 +393,13 @@ margin-bottom: 10%;
         justify-content:center;
         
     }
-
-
+}
+#pageContacto__redessociales{
+    display: inline-flex;
+    flex-direction: row;
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
 }
 .our-team {
   padding: 30px 0 40px;
