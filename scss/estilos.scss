@@ -1,14 +1,10 @@
 /* Modelos/Modificaciones aplicables a todo el sitio */
-html{
-    font-size: 62,5%;
-}
 $tamanioFuentes:(
     xs:calc(0.61rem + .5vw),
     s:calc(0.61rem + .9vw),
     n:calc(0.61rem + 1.3vw),
     b: calc(1.4rem + 1.7vw)
 );
-
 
 $tipografia-prin: 'Montserrat', sans-serif;
 $tipografia-sec: 'Nunito', sans-serif;
@@ -18,7 +14,19 @@ $fuente-navDesktop: map-get($tamanioFuentes, xs);
 $fuente-grande: map-get($tamanioFuentes, b);
 
 $color-1:#2EA37E;
-$color-2:#FF8800;
+$color-2:#FF8800;html{
+    font-size: 62,5%;
+}
+* {
+    margin:  0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: $tipografia-prin;
+    scroll-behavior: smooth;
+}
+
 
 
 @mixin configTexto($fontSize,$color,$textAlign,$marginUp,$marginDown){
@@ -29,24 +37,25 @@ $color-2:#FF8800;
     margin-bottom: $marginDown;
 }
 
-* {
-    margin:  0;
-    padding: 0;
-    font-family: $tipografia-prin;
-    scroll-behavior: smooth;
-} 
+
 
 .conteiner__article{
-    padding-top: 3vh;
+    padding-top: 70px;
+    height:100vh;
     h2{
-        @include configTexto($fuente-grande, black, center, 110px, 5px);
+        @include configTexto($fuente-grande, black, center, 0px, 5px);
     }
     h3{
         @include configTexto($fuente-normal, $color-1, center, 5px, 3%);
     }
     p{
         @include configTexto($fuente-pequena, black, center, 0px, 0%);
+        padding: 0 2%;
     }
+}
+.conteiner__article--platosIndividuales{
+    @extend .conteiner__article;
+    height: auto;
 }
 .btn {
     background-color: $color-1;
@@ -124,10 +133,11 @@ $color-2:#FF8800;
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
-    min-height: 75vh;
+    min-height: calc(100vh - 126px - 90px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 90px;
     h1{
         @include configTexto($fuente-grande, rgb(255, 255, 255), center, 10%, 10%);
     }
@@ -249,7 +259,7 @@ $color-2:#FF8800;
 
 .conteiner__article--propuestas{
 @extend .conteiner__article;
-margin-bottom: 10%;
+padding-top: 55px;
 }
 
 
@@ -385,6 +395,7 @@ margin-bottom: 10%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    input{border: 2px solid black;}
 }
 #pageComoFunciona__cuerpo{
     display: flex;
@@ -473,27 +484,63 @@ margin-bottom: 10%;
 }
 
 
-
-
-
-
-@media (max-width: 978px) {
-    .btn{font-size: 10px ;}
-    #map{display: none;}
-    #goDown{a{div{left: 49%;}}}
+@media (max-width: 2561px) {
+    #noticiaPrincipal{
+        h1{
+            padding: 0 10%;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+    }
+    .conteiner__card--propuesta{div {
+        min-width: 22%;
+        max-width: 9%;
+        margin: 7px 16px;
+    }}
+    
 }
+
+
+
 @media (max-width: 1130px) {
-    #map{display: none;}
-    #noticiaPrincipal{min-height: 100%;}
     .our-team{margin: 8%;}
-    .card{max-width: 42%;}
-    #goDown{a{div{left: 47%;bottom: 46%;}}}
-
+    .card{max-width: 21%;}
+    .card-text{p{font-size: $fuente-pequena;}}
 }
+@media (max-width: 1025px) {
+    #footer{#map{display: none;}}
+    .conteiner__card--propuesta{div {
+        min-width: 22%;
+        margin: 42px 15px;
+    }}
+    .conteiner__article--propuestas{padding-top: 55px; 
+    }
+}
+@media (max-width: 769px) {
+    .btn{font-size: 10px ;}
+    #footer{#map{display: none;}}
+    .conteiner__card--propuesta{div {min-width: 27%;margin: 8px 44px;}}
+    .conteiner__article--propuestas{padding-top: 15px;}
+}
+    
 
-@media (max-width: 1560px) {
-    #noticiaPrincipal{min-height: 70vh;}
-    #goDown{a{div{left: 49%;}}}
+@media (max-width: 426px) {
+    .btn{font-size: 10px ;}
+    #footer{#map{display: none;}}
+    .conteiner__card--propuesta div {
+        min-width: 38%;
+        margin: 12px 15px;
+    }
+    .conteiner__article--propuestas{padding-top: 40px;}
+}
+@media (max-width: 321px) {
+    #footer{#map{display: none;}}
+    .conteiner__card--propuesta div {
+        min-width: 41%;
+        margin: 12px 12px;
+    }
+    .conteiner__article--propuestas{padding-top: 40px;}
+
 }
 
 @keyframes scroll-down {

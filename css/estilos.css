@@ -5,29 +5,37 @@ html {
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth; }
 
-.conteiner__article, .conteiner__article--propuestas {
-  padding-top: 3vh; }
-  .conteiner__article h2, .conteiner__article--propuestas h2 {
+.conteiner__article, .conteiner__article--platosIndividuales, .conteiner__article--propuestas {
+  padding-top: 70px;
+  height: 100vh; }
+  .conteiner__article h2, .conteiner__article--platosIndividuales h2, .conteiner__article--propuestas h2 {
     font-size: calc(1.4rem + 1.7vw);
     color: black;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 0px;
     margin-bottom: 5px; }
-  .conteiner__article h3, .conteiner__article--propuestas h3 {
+  .conteiner__article h3, .conteiner__article--platosIndividuales h3, .conteiner__article--propuestas h3 {
     font-size: calc(0.61rem + 1.3vw);
     color: #2EA37E;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 3%; }
-  .conteiner__article p, .conteiner__article--propuestas p {
+  .conteiner__article p, .conteiner__article--platosIndividuales p, .conteiner__article--propuestas p {
     font-size: calc(0.61rem + .9vw);
     color: black;
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 0%; }
+    margin-bottom: 0%;
+    padding: 0 2%; }
+
+.conteiner__article--platosIndividuales {
+  height: auto; }
 
 .btn, .btn__irTienda {
   background-color: #2EA37E;
@@ -85,10 +93,11 @@ html {
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
-  min-height: 75vh;
+  min-height: calc(100vh - 126px - 90px);
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 90px; }
   #noticiaPrincipal h1 {
     font-size: calc(1.4rem + 1.7vw);
     color: white;
@@ -157,7 +166,7 @@ html {
         border: 2px dashed #ff672a; }
 
 .conteiner__article--propuestas {
-  margin-bottom: 10%; }
+  padding-top: 55px; }
 
 .conteiner__article--comofunciona {
   min-height: 100vh;
@@ -284,6 +293,8 @@ html {
     font-weight: bold; }
   #pageContacto__cuerpo div {
     margin: 5%; }
+  #pageContacto__cuerpo input {
+    border: 2px solid black; }
 
 #pageComoFunciona__cuerpo {
   display: flex; }
@@ -359,32 +370,63 @@ html {
   color: #4e5052;
   text-transform: capitalize; }
 
-@media (max-width: 978px) {
-  .btn, .btn__irTienda {
-    font-size: 10px; }
-  #map {
-    display: none; }
-  #goDown a div {
-    left: 49%; } }
+@media (max-width: 2561px) {
+  #noticiaPrincipal h1 {
+    padding: 0 10%;
+    margin-top: 5%;
+    margin-bottom: 3%; }
+  .conteiner__card--propuesta div {
+    min-width: 22%;
+    max-width: 9%;
+    margin: 7px 16px; } }
 
 @media (max-width: 1130px) {
-  #map {
-    display: none; }
-  #noticiaPrincipal {
-    min-height: 100%; }
   .our-team {
     margin: 8%; }
   .card {
-    max-width: 42%; }
-  #goDown a div {
-    left: 47%;
-    bottom: 46%; } }
+    max-width: 21%; }
+  .card-text p {
+    font-size: calc(0.61rem + .9vw); } }
 
-@media (max-width: 1560px) {
-  #noticiaPrincipal {
-    min-height: 70vh; }
-  #goDown a div {
-    left: 49%; } }
+@media (max-width: 1025px) {
+  #footer #map {
+    display: none; }
+  .conteiner__card--propuesta div {
+    min-width: 22%;
+    margin: 42px 15px; }
+  .conteiner__article--propuestas {
+    padding-top: 55px; } }
+
+@media (max-width: 769px) {
+  .btn, .btn__irTienda {
+    font-size: 10px; }
+  #footer #map {
+    display: none; }
+  .conteiner__card--propuesta div {
+    min-width: 27%;
+    margin: 8px 44px; }
+  .conteiner__article--propuestas {
+    padding-top: 15px; } }
+
+@media (max-width: 426px) {
+  .btn, .btn__irTienda {
+    font-size: 10px; }
+  #footer #map {
+    display: none; }
+  .conteiner__card--propuesta div {
+    min-width: 38%;
+    margin: 12px 15px; }
+  .conteiner__article--propuestas {
+    padding-top: 40px; } }
+
+@media (max-width: 321px) {
+  #footer #map {
+    display: none; }
+  .conteiner__card--propuesta div {
+    min-width: 41%;
+    margin: 12px 12px; }
+  .conteiner__article--propuestas {
+    padding-top: 40px; } }
 
 @keyframes scroll-down {
   0% {
