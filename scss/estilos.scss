@@ -114,12 +114,12 @@ $color-2:#FF8800;html{
                     transition: .02s;
                     border: 2px dashed $color-1;
                     background-color: #d0f5ef;
-                    border-radius: .1rem; 
+                    border-radius: .1rem;
                 }
             }
         }
     }
-    
+
 }
 
 
@@ -169,7 +169,7 @@ $color-2:#FF8800;html{
             left: 49%;
             bottom: 20px;
             border-radius: 50px;
-            cursor: pointer; 
+            cursor: pointer;
             &::before,&::after{
                 content: "";
                 position: absolute;
@@ -185,7 +185,7 @@ $color-2:#FF8800;html{
                 &::before{
                     top: 30%;
                     animation-delay: 0.3s;
-                }    
+                }
             }
         }
     }
@@ -206,7 +206,7 @@ $color-2:#FF8800;html{
             border: 2px dashed rgba(0, 0, 0, 0);
             padding: 0 0;
             width: 100%;
-            &:hover{           
+            &:hover{
                 opacity: 0.5; filter: alpha(opacity=50);
                 border-radius: 10px;
                 border: 2px dashed #5e3b06;
@@ -216,7 +216,7 @@ $color-2:#FF8800;html{
     }
 }
 // .test{
-//     div{      
+//     div{
 //     max-width: 22%;
 //     margin: 15px;
 //     min-width: 120px;
@@ -375,7 +375,7 @@ padding-top: 55px;
         p{font-size: $fuente-normal;}
         margin: 40px 0;
     }
-    
+
 }
 .pagePlatos__card{
     display: inline-flex;
@@ -395,14 +395,18 @@ padding-top: 55px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    input{border: 2px solid black;}
+    form{
+        input{border: 2px solid black; background-color: #dfdfdf;color: black}
+        textarea{border: 2px solid black;background-color: #cecece;}
+    }
+
 }
 #pageComoFunciona__cuerpo{
     display: flex;
     div{
         align-items: center;
         justify-content:center;
-        
+
     }
 }
 #pageContacto__redessociales{
@@ -419,7 +423,7 @@ padding-top: 55px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  
+
 
 }
 
@@ -497,7 +501,7 @@ padding-top: 55px;
         max-width: 9%;
         margin: 7px 16px;
     }}
-    
+
 }
 
 
@@ -513,7 +517,7 @@ padding-top: 55px;
         min-width: 22%;
         margin: 42px 15px;
     }}
-    .conteiner__article--propuestas{padding-top: 55px; 
+    .conteiner__article--propuestas{padding-top: 55px;
     }
 }
 @media (max-width: 769px) {
@@ -522,7 +526,7 @@ padding-top: 55px;
     .conteiner__card--propuesta{div {min-width: 27%;margin: 8px 44px;}}
     .conteiner__article--propuestas{padding-top: 15px;}
 }
-    
+
 
 @media (max-width: 426px) {
     .btn{font-size: 10px ;}

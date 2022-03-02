@@ -293,8 +293,13 @@ html {
     font-weight: bold; }
   #pageContacto__cuerpo div {
     margin: 5%; }
-  #pageContacto__cuerpo input {
-    border: 2px solid black; }
+  #pageContacto__cuerpo form input {
+    border: 2px solid black;
+    background-color: #dfdfdf;
+    color: black; }
+  #pageContacto__cuerpo form textarea {
+    border: 2px solid black;
+    background-color: #cecece; }
 
 #pageComoFunciona__cuerpo {
   display: flex; }
