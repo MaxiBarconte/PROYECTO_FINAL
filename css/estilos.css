@@ -187,7 +187,8 @@ html {
   box-sizing: border-box; }
   .test div:hover {
     border-radius: 10px;
-    border: 2px dashed #ff672a; }
+    border: 2px dashed #ff672a;
+    transform: scale(1.02); }
     .test div:hover p {
       top: 0%; }
   .test div p {
