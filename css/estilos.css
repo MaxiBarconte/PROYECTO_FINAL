@@ -531,9 +531,7 @@ html {
     min-width: 41%;
     margin: 12px 12px; }
   .conteiner__article--propuestas {
-    padding-top: 40px;
-    min-height: 686px;
-    max-height: 42.84rem; }
+    padding-top: 40px; }
   #navbar__logo {
     width: 150px;
     height: 75px; }
