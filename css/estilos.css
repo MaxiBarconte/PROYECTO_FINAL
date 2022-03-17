@@ -480,6 +480,27 @@ html {
       border: 2px dashed #2EA37E;
       background-color: #d0f5ef;
       border-radius: .1rem; }
+    .nav__modificaciones div div a img:hover {
+      animation: shake-baidu 2s ease 0s infinite;
+      animation-play-state: paused; }
+
+@keyframes shake-baidu {
+  from {
+    transform: rotate(0deg); }
+  4% {
+    transform: rotate(5deg); }
+  12.5% {
+    transform: rotate(-5deg); }
+  21% {
+    transform: rotate(5deg); }
+  29% {
+    transform: rotate(-5deg); }
+  37.5% {
+    transform: rotate(5deg); }
+  46% {
+    transform: rotate(-5deg); }
+  50%, to {
+    transform: rotate(0deg); } }
 
 /* FIN NAVBAR */
 /* INICIO mods MAIN  */
@@ -757,23 +778,6 @@ html {
     padding: 2vh 2vw;
     margin: 4%; }
 
-.card {
-  max-width: 42%;
-  max-width: 20%;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
-  overflow: auto; }
-  .card h5 {
-    font-family: "Nunito", sans-serif;
-    color: #FF8800;
-    font-size: calc(0.61rem + 1.3vw); }
-
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 100px; }
-
 #footer {
   background: white;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.319765) 4%, #fcb045 25%, #ff672a 100%);
@@ -789,6 +793,11 @@ html {
     padding: 15px;
     display: inline-block;
     margin: auto; }
+  #footer section div a img:hover {
+    opacity: 1.1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer; }
 
 /* FIN mods FOOTER  */
 .subpage__subtitulo {
@@ -1236,7 +1245,7 @@ html {
   justify-content: start;
   text-align: center;
   align-items: center;
-  height: 100vh; }
+  margin-bottom: 150px; }
 
 .card1,
 .card2,
@@ -1288,6 +1297,26 @@ html {
   .cardsExperiencia div img {
     width: 100%;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    max-height: 223px; }
   .cardsExperiencia p {
     font-size: calc(0.61rem + .5vw); }
+  .cardsExperiencia .card-socials img {
+    width: 50px;
+    box-shadow: none;
+    margin-bottom: 25px;
+    max-height: 73px; }
+
+@media (max-width: 500px) {
+  .containerExperiencias {
+    height: 250vh; }
+  .cardsExperiencia {
+    grid-template-columns: 1fr; }
+  .card1:hover,
+  .card2:hover,
+  .card3:hover {
+    transform: scale(1, 1); } }
+
+@media (max-width: 325px) {
+  .containerExperiencias {
+    height: 320vh; } }
