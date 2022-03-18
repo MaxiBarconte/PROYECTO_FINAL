@@ -21,6 +21,13 @@ $color-1:#2EA37E;
 $color-2:#FF8800;html{
     font-size: 62,5%;
 }
+@mixin configTexto($fontSize,$color,$textAlign,$marginUp,$marginDown){
+    font-size: $fontSize;
+    color: $color;
+    text-align: $textAlign;
+    margin-top: $marginUp;
+    margin-bottom: $marginDown;
+}
 * {
     margin:  0;
     padding: 0;
@@ -29,17 +36,12 @@ $color-2:#FF8800;html{
     box-sizing: border-box;
     font-family: $tipografia-prin;
     scroll-behavior: smooth;
+
 }
 
 
 
-@mixin configTexto($fontSize,$color,$textAlign,$marginUp,$marginDown){
-    font-size: $fontSize;
-    color: $color;
-    text-align: $textAlign;
-    margin-top: $marginUp;
-    margin-bottom: $marginDown;
-}
+
 
 
 
@@ -185,7 +187,18 @@ $color-2:#FF8800;html{
 
 
 
+.conteinerPropuesta{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div{
+        max-width: 22%;
+        // padding: 15px;
+        min-width: 120px;
+        // margin: 7px 16px;
 
+    }
+}
 
 .conteiner__card--propuesta{
     display: flex;
@@ -212,10 +225,8 @@ $color-2:#FF8800;html{
 }
 .propuesta{
     div{
-    max-width: 22%;
     margin: 15px;
-    min-width: 120px;
-    height: 22vw;
+    min-width: 22vw;
     border-radius:10px;
     border: 2px solid rgba(2, 0, 0, 0);
     padding: 0 0;
@@ -254,18 +265,18 @@ $color-2:#FF8800;html{
 .test{
     div{
     max-width: 22%;
-    margin: 15px;
-    min-width: 120px;
+    // margin: 15px;
+    min-width: 22vw;
     height: 22vw;
     border-radius:10px;
-    border: 2px solid rgba(2, 0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
     padding: 0 0;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-     background-image: url(../assets/prod/img_plato.jpg);
+    background-image: url(../assets/prod/img_plato.jpg);
     background-size: cover;
     transition: .5s;
     box-sizing: border-box;
@@ -299,11 +310,11 @@ $color-2:#FF8800;html{
 .propuesta2{
     div{
         max-width: 22%;
-        margin: 15px;
-        min-width: 120px;
+        // margin: 15px;
+        min-width: 22vw;
         height: 22vw;
         border-radius:10px;
-        border: 2px solid rgba(2, 0, 0, 0);
+        border: 2px solid rgb(255, 255, 255);
         padding: 0 0;
         width: 100%;
         overflow: hidden;
@@ -340,11 +351,11 @@ $color-2:#FF8800;html{
 .propuesta3{
     div{
         max-width: 22%;
-        margin: 15px;
-        min-width: 120px;
+        // margin: 15px;
+        min-width: 22vw;
         height: 22vw;
         border-radius:10px;
-        border: 2px solid rgba(2, 0, 0, 0);
+        border: 2px solid rgb(255, 255, 255);
         padding: 0 0;
         width: 100%;
         overflow: hidden;
@@ -381,11 +392,11 @@ $color-2:#FF8800;html{
 .propuesta4{
     div{
         max-width: 22%;
-        margin: 15px;
-        min-width: 120px;
+        // margin: 15px;
+        min-width: 22vw;
         height: 22vw;
         border-radius:10px;
-        border: 2px solid rgba(2, 0, 0, 0);
+        border: 2px solid rgb(255, 255, 255);
         padding: 0 0;
         width: 100%;
         overflow: hidden;
@@ -929,23 +940,7 @@ p{
     align-items: center;
     margin-bottom: 150px;
   }
-  
-//   .text {
-//     margin-bottom: 4rem;
-//     h1 {
-//       font-size: 3rem;
-//       & span {
-//         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-//       }
-//     }
-//     h2 {
-//       font-size: 1.5rem;
-//       & span {
-//         font-size: 2rem;
-//       }
-//     }
-//   }
-  
+
   .card1,
   .card2,
   .card3 {
@@ -1014,7 +1009,7 @@ p{
 
 @media (max-width: 500px) {
     .containerExperiencias {
-    height: 250vh;
+    // height: 250vh;
     }
     .cardsExperiencia {
     grid-template-columns: 1fr;
@@ -1031,6 +1026,6 @@ p{
 
 @media (max-width: 325px) {
     .containerExperiencias {
-    height: 320vh;
+    // height: 320vh;
     }
 }

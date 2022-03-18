@@ -535,6 +535,14 @@ html {
   #noticiaPrincipal div form {
     flex-direction: column; }
 
+.conteinerPropuesta {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .conteinerPropuesta div {
+    max-width: 22%;
+    min-width: 120px; }
+
 .conteiner__card--propuesta {
   display: flex;
   justify-content: center;
@@ -557,10 +565,8 @@ html {
         border: 2px dashed #ff672a; }
 
 .propuesta div, .propuesta1 div {
-  max-width: 22%;
   margin: 15px;
-  min-width: 120px;
-  height: 22vw;
+  min-width: 22vw;
   border-radius: 10px;
   border: 2px solid rgba(2, 0, 0, 0);
   padding: 0 0;
@@ -594,11 +600,10 @@ html {
 
 .test div {
   max-width: 22%;
-  margin: 15px;
-  min-width: 120px;
+  min-width: 22vw;
   height: 22vw;
   border-radius: 10px;
-  border: 2px solid rgba(2, 0, 0, 0);
+  border: 2px solid white;
   padding: 0 0;
   width: 100%;
   overflow: hidden;
@@ -634,11 +639,10 @@ html {
 
 .propuesta2 div {
   max-width: 22%;
-  margin: 15px;
-  min-width: 120px;
+  min-width: 22vw;
   height: 22vw;
   border-radius: 10px;
-  border: 2px solid rgba(2, 0, 0, 0);
+  border: 2px solid white;
   padding: 0 0;
   width: 100%;
   overflow: hidden;
@@ -671,11 +675,10 @@ html {
 
 .propuesta3 div {
   max-width: 22%;
-  margin: 15px;
-  min-width: 120px;
+  min-width: 22vw;
   height: 22vw;
   border-radius: 10px;
-  border: 2px solid rgba(2, 0, 0, 0);
+  border: 2px solid white;
   padding: 0 0;
   width: 100%;
   overflow: hidden;
@@ -708,11 +711,10 @@ html {
 
 .propuesta4 div {
   max-width: 22%;
-  margin: 15px;
-  min-width: 120px;
+  min-width: 22vw;
   height: 22vw;
   border-radius: 10px;
-  border: 2px solid rgba(2, 0, 0, 0);
+  border: 2px solid white;
   padding: 0 0;
   width: 100%;
   overflow: hidden;
@@ -1308,15 +1310,9 @@ html {
     max-height: 73px; }
 
 @media (max-width: 500px) {
-  .containerExperiencias {
-    height: 250vh; }
   .cardsExperiencia {
     grid-template-columns: 1fr; }
   .card1:hover,
   .card2:hover,
   .card3:hover {
     transform: scale(1, 1); } }
-
-@media (max-width: 325px) {
-  .containerExperiencias {
-    height: 320vh; } }
