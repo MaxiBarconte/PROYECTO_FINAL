@@ -514,7 +514,7 @@ html {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth; }
 
-.configuracionTexto h2, .conteiner__article--propuestas h2, .conteiner__article--platosIndividuales h2 {
+.configuracionTexto h2, .conteiner__article--platosIndividuales h2 {
   font-size: calc(1.4rem + 1.7vw);
   color: black;
   text-align: center;
@@ -523,14 +523,14 @@ html {
   font-weight: bold;
   padding-top: 70px; }
 
-.configuracionTexto h3, .conteiner__article--propuestas h3, .conteiner__article--platosIndividuales h3 {
+.configuracionTexto h3, .conteiner__article--platosIndividuales h3 {
   font-size: calc(0.61rem + 1.3vw);
   color: #2EA37E;
   text-align: center;
   margin-top: 5px;
   margin-bottom: 3%; }
 
-.configuracionTexto p, .conteiner__article--propuestas p, .conteiner__article--platosIndividuales p {
+.configuracionTexto p, .conteiner__article--platosIndividuales p {
   font-size: calc(0.61rem + .9vw);
   color: black;
   text-align: center;
@@ -562,7 +562,8 @@ html {
   .btn:active {
     background-color: #87dbd0; }
 
-/* Inicio mods del header */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN CODIGO UNIVERSAL  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF NAVBAR  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .nav__modificaciones div div {
   display: flex;
   justify-content: space-around; }
@@ -587,8 +588,8 @@ html {
       .nav__modificaciones div div a img:hover {
         animation-play-state: running; }
 
-/* FIN NAVBAR */
-/* INICIO mods MAIN  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN MODIF NAVBAR  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF MAIN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 #noticiaPrincipal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/slider01.jpg);
   background-repeat: no-repeat;
@@ -622,68 +623,13 @@ html {
 
 .conteinerPropuesta {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-  .conteinerPropuesta div {
-    width: 50%;
-    min-width: 120px; }
-
-.conteiner__card--propuesta {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
-  .conteiner__card--propuesta div {
-    max-width: 22%;
-    margin: 15px;
-    min-width: 120px; }
-    .conteiner__card--propuesta div img {
-      z-index: -100;
-      border-radius: 10px;
-      border: 2px dashed rgba(0, 0, 0, 0);
-      padding: 0 0;
-      width: 100%; }
-      .conteiner__card--propuesta div img:hover {
-        opacity: 0.5;
-        filter: alpha(opacity=50);
-        border-radius: 10px;
-        border: 2px dashed #5e3b06;
-        border: 2px dashed #ff672a; }
+  flex-wrap: wrap;
+  margin: 0 2%; }
+  .conteinerPropuesta p {
+    margin: 3% 2% 8% 2%; }
 
-.propuesta div {
-  margin: 15px;
-  min-width: 22vw;
-  border-radius: 10px;
-  border: 2px solid rgba(2, 0, 0, 0);
-  padding: 0 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  transition: .5s;
-  box-sizing: border-box; }
-  .propuesta div:hover {
-    border-radius: 10px;
-    border: 2px dashed #ff672a;
-    transform: scale(1.02); }
-    .propuesta div:hover p {
-      top: 0%; }
-  .propuesta div p {
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 110%;
-    font-size: calc(0.61rem + 1.3vw);
-    background: rgba(0, 0, 0, 0.38);
-    padding: .1rem;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center; }
-
-.estiloCard div {
+.estiloCardPropuesta div {
   max-width: 22%;
   min-width: 22vw;
   height: 22vw;
@@ -698,18 +644,19 @@ html {
   transition: .5s;
   box-sizing: border-box;
   background-size: cover; }
-  .estiloCard div:hover {
+  .estiloCardPropuesta div:hover {
     border-radius: 10px;
     border: 2px dashed #ff672a;
     transform: scale(1.02); }
-    .estiloCard div:hover p {
-      top: 0%; }
-  .estiloCard div p {
+    .estiloCardPropuesta div:hover p {
+      top: 0%;
+      margin: 0; }
+  .estiloCardPropuesta div p {
     color: white;
     width: 100%;
     height: 100%;
     position: relative;
-    top: 110%;
+    top: 133%;
     font-size: calc(0.61rem + 1.3vw);
     background: rgba(0, 0, 0, 0.38);
     padding: .1rem;
@@ -717,6 +664,12 @@ html {
     box-sizing: border-box;
     align-items: center;
     justify-content: center; }
+
+#conteiner2propuesta {
+  width: 50%;
+  display: flex;
+  min-width: 240px;
+  justify-content: space-around; }
 
 #backgroundCard1 div {
   background-image: url(../assets/prod/img_plato.jpg); }
@@ -729,158 +682,6 @@ html {
 
 #backgroundCard4 div {
   background-image: url(../assets/prod/img_lechealmendras2.jpg); }
-
-.test div, .propuesta1 div {
-  max-width: 22%;
-  min-width: 22vw;
-  height: 22vw;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 0 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../assets/prod/img_plato.jpg);
-  background-size: cover;
-  transition: .5s;
-  box-sizing: border-box; }
-  .test div:hover, .propuesta1 div:hover {
-    border-radius: 10px;
-    border: 2px dashed #ff672a;
-    transform: scale(1.02); }
-    .test div:hover p, .propuesta1 div:hover p {
-      top: 0%; }
-  .test div p, .propuesta1 div p {
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 110%;
-    font-size: calc(0.61rem + 1.3vw);
-    background: rgba(0, 0, 0, 0.38);
-    padding: .1rem;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center; }
-
-.propuesta1 {
-  background-image: url(../assets/prod/img_plato.jpg); }
-
-.propuesta2 div {
-  max-width: 22%;
-  min-width: 22vw;
-  height: 22vw;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 0 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../assets/prod/img_ensalada2.jpg);
-  background-size: cover;
-  transition: .5s;
-  box-sizing: border-box; }
-  .propuesta2 div:hover {
-    border-radius: 10px;
-    border: 2px dashed #ff672a;
-    transform: scale(1.02); }
-    .propuesta2 div:hover p {
-      top: 0%; }
-  .propuesta2 div p {
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 110%;
-    font-size: calc(0.61rem + 1.3vw);
-    background: rgba(0, 0, 0, 0.38);
-    padding: .1rem;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center; }
-
-.propuesta3 div {
-  max-width: 22%;
-  min-width: 22vw;
-  height: 22vw;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 0 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../assets/prod/img_hamburguesa.jpg);
-  background-size: cover;
-  transition: .5s;
-  box-sizing: border-box; }
-  .propuesta3 div:hover {
-    border-radius: 10px;
-    border: 2px dashed #ff672a;
-    transform: scale(1.02); }
-    .propuesta3 div:hover p {
-      top: 0%; }
-  .propuesta3 div p {
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 110%;
-    font-size: calc(0.61rem + 1.3vw);
-    background: rgba(0, 0, 0, 0.38);
-    padding: .1rem;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center; }
-
-.propuesta4 div {
-  max-width: 22%;
-  min-width: 22vw;
-  height: 22vw;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 0 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../assets/prod/img_lechealmendras2.jpg);
-  background-size: cover;
-  transition: .5s;
-  box-sizing: border-box; }
-  .propuesta4 div:hover {
-    border-radius: 10px;
-    border: 2px dashed #ff672a;
-    transform: scale(1.02); }
-    .propuesta4 div:hover p {
-      top: 0%; }
-  .propuesta4 div p {
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 110%;
-    font-size: calc(0.61rem + 1.3vw);
-    background: rgba(0, 0, 0, 0.38);
-    padding: .1rem;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center; }
-
-.conteiner__article--propuestas {
-  padding-top: 25px; }
-  .conteiner__article--propuestas p {
-    margin-bottom: 9%; }
 
 .conteiner__article--comofunciona {
   min-height: 100vh;
@@ -912,110 +713,7 @@ html {
     padding: 2vh 2vw;
     margin: 4%; }
 
-#footer {
-  background: white;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.319765) 4%, #fcb045 25%, #ff672a 100%);
-  background-color: #FF8800;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: calc(0.61rem + .5vw);
-  text-align: center;
-  color: #fff; }
-  #footer div {
-    padding: 15px;
-    display: inline-block;
-    margin: auto; }
-  #footer section div a img:hover {
-    opacity: 1.1;
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    cursor: pointer; }
-
-/* FIN mods FOOTER  */
-.subpage__subtitulo {
-  height: 25vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
-  margin-bottom: 8%; }
-  .subpage__subtitulo p {
-    font-family: "Nunito", sans-serif;
-    color: #fff;
-    font-size: calc(1.4rem + 1.7vw);
-    text-align: center;
-    padding: 18px;
-    margin-bottom: 150px; }
-  .subpage__subtitulo h2 {
-    font-size: calc(1.4rem + 1.7vw);
-    padding: 0 10%;
-    margin-bottom: 10px; }
-
-.max__img_plato {
-  max-width: 10%;
-  min-width: 50px; }
-
-.pageBeneficios__cuerpo {
-  padding: 0 10%;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px; }
-  .pageBeneficios__cuerpo h2 {
-    font-weight: bold; }
-  .pageBeneficios__cuerpo div {
-    display: inline-flex;
-    margin: 40px 0; }
-    .pageBeneficios__cuerpo div img {
-      max-width: 100px;
-      margin-right: 20px; }
-    .pageBeneficios__cuerpo div p {
-      font-size: calc(0.61rem + 1.3vw); }
-
-.pagePlatos__card {
-  display: inline-flex;
-  max-width: 22%;
-  min-width: 22%;
-  padding: 0;
-  margin: 1%;
-  text-align: center; }
-  .pagePlatos__card p {
-    min-height: 7vw;
-    align-items: center;
-    text-align: center;
-    padding-top: 5%; }
-
-#pageContacto__cuerpo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  #pageContacto__cuerpo h2 {
-    font-size: calc(0.61rem + 1.3vw);
-    font-weight: bold; }
-  #pageContacto__cuerpo div {
-    margin: 5%; }
-  #pageContacto__cuerpo form input {
-    border: 2px solid black;
-    background-color: #dfdfdf;
-    color: black; }
-  #pageContacto__cuerpo form textarea {
-    border: 2px solid black;
-    background-color: #cecece; }
-
-#pageComoFunciona__cuerpo {
-  display: flex; }
-  #pageComoFunciona__cuerpo div {
-    align-items: center;
-    justify-content: center; }
-
-#pageContacto__redessociales {
-  display: inline-flex;
-  flex-direction: row;
-  width: 150px;
-  height: 100px;
-  border: 2px solid black; }
-
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  OUR-TEAM CLASE CARD COMO COMPRAR NUESTROS PRODUCTOS  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
@@ -1077,11 +775,8 @@ html {
   color: #4e5052;
   text-transform: capitalize; }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN OUR-TEAM CLASE CARD COMO COMPRAR NUESTROS PRODUCTOS  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  CLASES ANIMACION SCROLL DOWN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .mouse_scroll {
   display: block;
   margin: 0 auto;
@@ -1160,6 +855,116 @@ html {
   -webkit-animation: mouse-wheel 0.6s linear infinite;
   -moz-animation: mouse-wheel 0.6s linear infinite;
   animation: mouse-wheel 0.6s linear infinite; }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN CLASES ANIMACION SCROLL DOWN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN MODIF MAIN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF FOOTER  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+#footer {
+  background: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.319765) 4%, #fcb045 25%, #ff672a 100%);
+  background-color: #FF8800;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: calc(0.61rem + .5vw);
+  text-align: center;
+  color: #fff; }
+  #footer div {
+    display: inline-block;
+    padding: 15px;
+    margin: auto; }
+  #footer section div a img:hover {
+    opacity: 1.1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer; }
+
+/* FIN mods FOOTER  */
+.subpage__subtitulo {
+  height: 25vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
+  margin-bottom: 8%; }
+  .subpage__subtitulo p {
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    font-size: calc(1.4rem + 1.7vw);
+    text-align: center;
+    padding: 18px;
+    margin-bottom: 150px; }
+  .subpage__subtitulo h2 {
+    font-size: calc(1.4rem + 1.7vw);
+    padding: 0 10%;
+    margin-bottom: 10px; }
+
+.pageBeneficios__cuerpo {
+  padding: 0 10%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px; }
+  .pageBeneficios__cuerpo h2 {
+    font-weight: bold; }
+  .pageBeneficios__cuerpo div {
+    display: inline-flex;
+    margin: 40px 0; }
+    .pageBeneficios__cuerpo div img {
+      max-width: 100px;
+      max-height: 100px;
+      margin: 0 20px; }
+    .pageBeneficios__cuerpo div p {
+      font-size: calc(0.61rem + 1.3vw); }
+
+.pagePlatos__card {
+  display: inline-flex;
+  max-width: 22%;
+  min-width: 22%;
+  padding: 0;
+  margin: 1%;
+  text-align: center; }
+  .pagePlatos__card p {
+    min-height: 7vw;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%; }
+
+#pageContacto__cuerpo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  #pageContacto__cuerpo h2 {
+    font-size: calc(0.61rem + 1.3vw);
+    font-weight: bold; }
+  #pageContacto__cuerpo div {
+    margin: 5%; }
+  #pageContacto__cuerpo form input {
+    border: 2px solid black;
+    background-color: #dfdfdf;
+    color: black; }
+  #pageContacto__cuerpo form textarea {
+    border: 2px solid black;
+    background-color: #cecece; }
+
+#pageComoFunciona__cuerpo {
+  display: flex;
+  padding: 0% 2%; }
+  #pageComoFunciona__cuerpo div {
+    align-items: center;
+    justify-content: center; }
+
+#pageContacto__redessociales {
+  display: inline-flex;
+  flex-direction: row;
+  width: 150px;
+  height: 100px;
+  border: 2px solid black; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 #footerNovedades a img {
   margin-top: 15px; }
@@ -1242,11 +1047,7 @@ html {
   #noticiaPrincipal h1 {
     padding: 0 10%;
     margin-top: 11%;
-    margin-bottom: 3%; }
-  .conteiner__card--propuesta div {
-    min-width: 22%;
-    max-width: 9%;
-    margin: 7px 16px; } }
+    margin-bottom: 3%; } }
 
 @media (max-width: 1130px) and (min-width: 1026px) {
   .our-team {
@@ -1259,25 +1060,29 @@ html {
 @media (max-width: 1025px) and (min-width: 770px) {
   #footer #map {
     display: none; }
-  .conteiner__card--propuesta div {
-    min-width: 22%;
-    margin: 42px 15px; }
   .conteiner__article--propuestas {
     padding-top: 25px; } }
+
+@media (min-width: 770px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 33%; } }
+
+@media (max-width: 769px) {
+  #conteiner2propuesta {
+    width: 90%; }
+  .estiloCard div {
+    min-width: 38vw;
+    min-height: 38vw; }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 90%; } }
 
 @media (max-width: 769px) and (min-width: 427px) {
   .btn {
     font-size: 10px; }
   #footer #map {
     display: none; }
-  .conteiner__card--propuesta div {
-    min-width: 27%;
-    margin: 8px 44px; }
-  .conteiner__card--propuesta div {
-    min-width: 27%;
-    margin: 8px 44px; }
-  .conteiner__article--propuestas {
-    padding-top: 15px; }
   #navbar__logo {
     width: 190px;
     height: 85px; }
@@ -1295,11 +1100,6 @@ html {
     font-size: 10px; }
   #footer #map {
     display: none; }
-  .conteiner__card--propuesta div {
-    min-width: 38%;
-    margin: 12px 15px; }
-  .conteiner__article--propuestas {
-    padding-top: 40px; }
   #navbar__logo {
     width: 180px;
     height: 90px; }
@@ -1317,11 +1117,6 @@ html {
     font-size: 10px; }
   #footer #map {
     display: none; }
-  .conteiner__card--propuesta div {
-    min-width: 38%;
-    margin: 12px 15px; }
-  .conteiner__article--propuestas {
-    padding-top: 40px; }
   #navbar__logo {
     width: 150px;
     height: 75px; }
@@ -1337,11 +1132,6 @@ html {
 @media (max-width: 321px) {
   #footer #map {
     display: none; }
-  .conteiner__card--propuesta div {
-    min-width: 41%;
-    margin: 12px 12px; }
-  .conteiner__article--propuestas {
-    padding-top: 40px; }
   #navbar__logo {
     width: 150px;
     height: 75px; }
