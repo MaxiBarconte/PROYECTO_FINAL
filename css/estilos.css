@@ -672,16 +672,16 @@ html {
   justify-content: space-around; }
 
 #backgroundCard1 div {
-  background-image: url(../assets/prod/img_plato.jpg); }
+  background-image: url(../assets/index/propuesta1.jpg); }
 
 #backgroundCard2 div {
-  background-image: url(../assets/prod/img_ensalada2.jpg); }
+  background-image: url(../assets/index/propuesta2.jpg); }
 
 #backgroundCard3 div {
-  background-image: url(../assets/prod/img_hamburguesa.jpg); }
+  background-image: url(../assets/index/propuesta3.jpg); }
 
 #backgroundCard4 div {
-  background-image: url(../assets/prod/img_lechealmendras2.jpg); }
+  background-image: url(../assets/index/propuesta4.jpg); }
 
 .conteiner__article--comofunciona {
   min-height: 100vh;
@@ -1100,7 +1100,11 @@ html {
     min-height: 38vw; }
   .col-sm-6 {
     flex: 0 0 auto;
-    width: 90%; } }
+    width: 90%; }
+  .estiloCardPropuesta div {
+    min-width: 34vw;
+    height: auto;
+    height: 34vw; } }
 
 @media (max-width: 769px) and (min-width: 427px) {
   .btn {
