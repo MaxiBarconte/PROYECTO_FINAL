@@ -20,7 +20,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light nav__modificaciones">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="../index.html">
-				<img src="../assets/logo300x150.png" alt="" width="200" height="100">
+				<img id="navbar__logo" src="../assets/KinowaLOGO.svg" alt="" width="200" height="100">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,8 @@
 
 		<!-- Inicio main -->
 	<main>
-			<div class="subpage__subtitulo">
-				<p>COMO FUNCIONA</p>
+			<div class="propiedadesTituloPagina">
+				<h2>COMO FUNCIONA</h2>
 			</div>
 
 
@@ -106,7 +106,7 @@
 			</div>
 
 
-			<a class="btn" href="https://treinta.shop/kinowa" target="_blank">Comenzar ahora e ir a la Tienda </a>
+			<a class="btn pageComoFunciona__btn" href="https://treinta.shop/kinowa" target="_blank">Comenzar ahora e ir a la Tienda </a>
 
 
 
@@ -134,31 +134,25 @@
 
 
 	<!-- inicio footer --> 
-	<!-- ESTE DIV SE ELIMINARA -->
-	<div id="footer__gradient"></div> 
-	<!-- ESTE DIV SE ELIMINARA -->
-
-
 	<footer id="footer">
 		<div>
-			<a href="../index.html"><img src="../assets/logo contraste3 200x100.png" alt="KINOWA LOGO"></a>			
+			<a href="../index.html"><img src="../assets/logo contraste2 200x100.png" alt="KINOWA LOGO"></a>			
 			<p>S.S. de Jujuy, Jujuy, Argentina</p>
 		</div>
 		<section>
-			<div>
-				<p>HACE TU PEDIDO <br>HACIENDO CLICK ACA</p>
-					<a class="btn" href="https://api.whatsapp.com/send?phone=+543885001000&text=Hola!!%20Quiero%20hacer%20un%20pedido%F0%9F%A5%97%20%20mi%20nombre%20es" target="_blank">Link directo a whatsapp</a>
+			<div id="footerWhatsapp">
+				<p>HACE TU PEDIDO <br>POR WHATSAPP</p>
 				<p>Lunes a viernes de 9 a 16:30 h</p>
+				<a href="https://api.whatsapp.com/send?phone=+543885001000" target="_blank">
+					<img src="../assets/logowhatsapp.png" width="50" height="50" >
+				</a>
 			</div>
-			<div>
-				<form>
-					<label for="newSubscription">
-						<p>QUERES PARTICIPAR DE SORTEOS Y </p>
-						<p>SABER NUESTRAS PROMOCIONES?: </p>
-						<input type="text" name="newSubscription" placeholder="Ingresa tu telefono" required/>
-						<input class="btn" type="submit">
-					</label>	
-				</form>
+			<div id="footerNovedades">
+				<p>QUERES PARTICIPAR DE SORTEOS Y </p>
+				<p>SABER NUESTRAS PROMOCIONES?: </p>
+				<a href="../pages/contacto.html">
+					<img src="../assets/regalo.png	" width="50" height="50" >
+				</a>
 			</div>
 		</section>
 		<div id="map">

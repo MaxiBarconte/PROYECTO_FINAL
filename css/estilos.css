@@ -566,7 +566,7 @@ html {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF NAVBAR  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .nav__modificaciones div div {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-evenly; }
   .nav__modificaciones div div a {
     font-family: "Nunito", sans-serif;
     display: inline-block;
@@ -881,19 +881,32 @@ html {
     cursor: pointer; }
 
 /* FIN mods FOOTER  */
-.subpage__subtitulo {
+.propiedadesTituloPagina {
   height: 25vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
   margin-bottom: 8%; }
-  .subpage__subtitulo p {
+  .propiedadesTituloPagina h2 {
     font-family: "Nunito", sans-serif;
     color: #fff;
     font-size: calc(1.4rem + 1.7vw);
     text-align: center;
     padding: 18px;
     margin-bottom: 150px; }
-  .subpage__subtitulo h2 {
+
+.pagePlatos_main {
+  height: 25vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
+  margin-bottom: 8%; }
+  .pagePlatos_main h2 {
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    font-size: calc(1.4rem + 1.7vw);
+    text-align: center;
+    padding: 18px;
+    margin-bottom: 150px; }
+  .pagePlatos_main h3 {
     font-size: calc(1.4rem + 1.7vw);
     padding: 0 10%;
     margin-bottom: 10px; }
@@ -929,6 +942,32 @@ html {
     text-align: center;
     padding-top: 5%; }
 
+.cardPlatos {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 500ms; }
+  .cardPlatos h3 {
+    color: #3b5998;
+    margin-bottom: 1rem; }
+  .cardPlatos p {
+    margin-bottom: 1rem; }
+  .cardPlatos i {
+    padding: 0.6rem;
+    background: grey;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    color: white;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3); }
+    .cardPlatos i:first-child {
+      background-color: #55acee; }
+    .cardPlatos i:nth-child(2) {
+      background-color: #3b5998; }
+    .cardPlatos i:last-child {
+      background-color: #ec4a89; }
+  .cardPlatos:hover {
+    transform: scale(1.1, 1.1); }
+
 #pageContacto__cuerpo {
   display: flex;
   align-items: center;
@@ -953,6 +992,10 @@ html {
   #pageComoFunciona__cuerpo div {
     align-items: center;
     justify-content: center; }
+
+.pageComoFunciona__btn {
+  display: block;
+  margin: 3% 10%; }
 
 #pageContacto__redessociales {
   display: inline-flex;
@@ -983,48 +1026,29 @@ html {
   align-items: center;
   margin-bottom: 150px; }
 
-.card1,
-.card2,
-.card3 {
+.cardOpinion {
   background: white;
   border-radius: 10px;
-  cursor: pointer;
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
   transition: 500ms; }
-  .card1 h3,
-  .card2 h3,
-  .card3 h3 {
+  .cardOpinion h3 {
     color: #3b5998;
     margin-bottom: 1rem; }
-  .card1 p,
-  .card2 p,
-  .card3 p {
+  .cardOpinion p {
     margin-bottom: 1rem; }
-  .card1 i,
-  .card2 i,
-  .card3 i {
+  .cardOpinion i {
     padding: 0.6rem;
     background: grey;
     border-radius: 50%;
     margin-bottom: 1rem;
     color: white;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3); }
-    .card1 i:first-child,
-    .card2 i:first-child,
-    .card3 i:first-child {
+    .cardOpinion i:first-child {
       background-color: #55acee; }
-    .card1 i:nth-child(2),
-    .card2 i:nth-child(2),
-    .card3 i:nth-child(2) {
+    .cardOpinion i:nth-child(2) {
       background-color: #3b5998; }
-    .card1 i:last-child,
-    .card2 i:last-child,
-    .card3 i:last-child {
+    .cardOpinion i:last-child {
       background-color: #ec4a89; }
-  .card1:hover,
-  .card2:hover,
-  .card3:hover {
-    transform: scale(1.1, 1.1); }
 
 .cardsExperiencia {
   display: grid;
@@ -1149,9 +1173,7 @@ html {
 @media (max-width: 500px) {
   .cardsExperiencia {
     grid-template-columns: 1fr; }
-  .card1:hover,
-  .card2:hover,
-  .card3:hover {
+  .cardPlatos:hover {
     transform: scale(1, 1); } }
 
 .conteiner__article--platosIndividuales {
