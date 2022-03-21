@@ -1,0 +1,16 @@
+$tamanioFuentes:(
+    xs:calc(0.61rem + .5vw),
+    s:calc(0.61rem + .9vw),
+    n:calc(0.61rem + 1.3vw),
+    b: calc(1.4rem + 1.7vw)
+);
+
+$tipografia-prin: 'Montserrat', sans-serif;
+$tipografia-sec: 'Nunito', sans-serif;
+$fuente-normal: map-get($tamanioFuentes, n);
+$fuente-pequena: map-get($tamanioFuentes, s);
+$fuente-navDesktop: map-get($tamanioFuentes, xs);
+$fuente-grande: map-get($tamanioFuentes, b);
+
+$color-1:#2EA37E;
+$color-2:#FF8800;
