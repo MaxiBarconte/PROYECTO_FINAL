@@ -1,6 +1,6 @@
 /* Modelos/Modificaciones aplicables a todo el sitio */
 
-@import 'card';
+// @import 'card';
 @import 'animation';
 @import 'variables';
 
@@ -181,9 +181,7 @@ html{
             border-radius: 10px;
             border: 2px solid rgba(255,103,42,1);
             // border: 2px solid rgb(100, 221, 76);
-
             transform: scale(1.02);
-
             
         }
         p{
@@ -430,7 +428,7 @@ html{
 
 
 
-// CLASES ID PAGINAS SECUNDARIAS
+// CLASES PARA PAGINAS SECUNDARIAS
 .propiedadesTituloPagina{
         height: 25vh;
         width: 100%;
@@ -571,13 +569,6 @@ html{
     }
 }
 
-
-
-
-
-
-
-
 #pageComoFunciona__cuerpo{
     display: flex;
     padding: 0% 2%;
@@ -688,25 +679,25 @@ html{
     border: solid $border transparent; /* !importanté */
     border-radius: 1em;
     &:before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      z-index: -1;
-      margin: -$border; /* !importanté */
-      border-radius: inherit; /* !importanté */
-      background: linear-gradient(to right, red, orange);
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(to right, red, orange);
     }
-  }
+}
 .gradient-box-green{
     @extend .gradient-box;
     &:before {
-      background: linear-gradient(to right, rgb(139, 207, 112), rgb(123, 224, 255));
+        background: linear-gradient(to right, rgb(139, 207, 112), rgb(123, 224, 255));
     }
 }
 .gradient-box-orange{
     @extend .gradient-box;
     &:before {
-      background: linear-gradient(to right, rgb(255, 172, 49), rgb(123, 224, 255));
+        background: linear-gradient(to right, rgb(255, 172, 49), rgb(123, 224, 255));
     }
 }
 
@@ -762,7 +753,6 @@ html{
         }
         a{
             text-decoration: none;
-
         }
     }
 }
