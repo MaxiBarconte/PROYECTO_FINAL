@@ -1229,7 +1229,9 @@ html {
       #pageContacto__conteinerSocialNetwork section button {
         margin: 5% 0%; }
   #pageContacto__cuerpo form textarea {
-    padding: 0; } }
+    padding: 0; }
+  .cardsPlatosIndividuales {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (max-width: 769px) and (min-width: 427px) {
   .btn {
@@ -1246,7 +1248,9 @@ html {
     margin: 13px 0 31px; }
   #pageComoFunciona__cuerpo div {
     margin: auto;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .cardsPlatosIndividuales {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media (max-width: 426px) and (min-width: 376px) {
   .btn {
