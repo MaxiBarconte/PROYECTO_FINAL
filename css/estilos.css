@@ -608,7 +608,7 @@ html {
     text-align: center;
     margin-top: 30%;
     margin-bottom: 10%;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     margin: 50% 10px; }
@@ -623,6 +623,11 @@ html {
     flex-direction: column; }
   #noticiaPrincipal a {
     margin: 55px; }
+
+.propTextoTituloPrincipal--efectoEscribir {
+  font-weight: bold;
+  color: #2EA37E;
+  text-decoration: underline; }
 
 .conteinerPropuesta {
   display: flex;
@@ -724,6 +729,8 @@ html {
   text-align: center;
   overflow: hidden;
   position: relative; }
+  .our-team h4 {
+    padding: 4px; }
 
 .our-team .picture {
   display: inline-block;
@@ -774,6 +781,7 @@ html {
 
 .our-team .title {
   display: block;
+  padding: 4px;
   font-size: 15px;
   color: #4e5052;
   text-transform: capitalize; }
@@ -927,7 +935,7 @@ html {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px; }
-  .pageBeneficios__cuerpo h2 {
+  .pageBeneficios__cuerpo h3 {
     font-weight: bold; }
   .pageBeneficios__cuerpo div {
     display: inline-flex;
@@ -978,6 +986,34 @@ html {
   .cardPlatos:hover {
     transform: scale(1.1, 1.1); }
 
+.cardPlatosProximamente {
+  display: block;
+  padding: 50% 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 500ms; }
+  .cardPlatosProximamente h3 {
+    color: #3b5998;
+    margin-bottom: 1rem; }
+  .cardPlatosProximamente p {
+    margin-bottom: 1rem; }
+  .cardPlatosProximamente i {
+    padding: 0.6rem;
+    background: grey;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    color: white;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3); }
+    .cardPlatosProximamente i:first-child {
+      background-color: #55acee; }
+    .cardPlatosProximamente i:nth-child(2) {
+      background-color: #3b5998; }
+    .cardPlatosProximamente i:last-child {
+      background-color: #ec4a89; }
+  .cardPlatosProximamente:hover {
+    transform: scale(1.1, 1.1); }
+
 #pageContacto__cuerpo {
   display: flex;
   align-items: center;
@@ -1025,7 +1061,7 @@ html {
 #footerWhatsapp a img {
   margin-top: 7px; }
 
-.containerExperiencias {
+.conteinerExperiencias {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
@@ -1039,8 +1075,11 @@ html {
 .cardOpinion {
   background: white;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
   transition: 500ms; }
+  .cardOpinion:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.02); }
   .cardOpinion h3 {
     color: #3b5998;
     margin-bottom: 1rem; }
@@ -1060,18 +1099,52 @@ html {
     .cardOpinion i:last-child {
       background-color: #ec4a89; }
 
-.cardsExperiencia {
+.gradient-box, .gradient-box-green, .gradient-box-orange {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  padding: 1%;
+  box-sizing: border-box;
+  color: black;
+  background: white;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 3px transparent;
+  /* !importanté */
+  border-radius: 1em; }
+  .gradient-box:before, .gradient-box-green:before, .gradient-box-orange:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: linear-gradient(to right, red, orange); }
+
+.gradient-box-green:before {
+  background: linear-gradient(to right, #8bcf70, #7be0ff); }
+
+.gradient-box-orange:before {
+  background: linear-gradient(to right, #ffac31, #7be0ff); }
+
+.cardExperiencias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem; }
-  .cardsExperiencia div img {
+  .cardExperiencias div img {
     width: 100%;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
     margin-bottom: 1rem;
     max-height: 223px; }
-  .cardsExperiencia p {
+  .cardExperiencias p {
     font-size: calc(0.61rem + .5vw); }
-  .cardsExperiencia .card-socials img {
+  .cardExperiencias .card-socials img {
     width: 50px;
     box-shadow: none;
     margin-bottom: 25px;
@@ -1112,6 +1185,10 @@ html {
   text-align: center;
   align-items: center;
   margin-bottom: 150px; }
+  .containerPlatosIndividuales h2 {
+    font-size: calc(0.61rem + 1.3vw);
+    font-weight: bold;
+    margin-bottom: 55px; }
 
 .cardsPlatosIndividuales {
   display: grid;
@@ -1149,6 +1226,9 @@ html {
 .border-gradient-green {
   border-image-source: linear-gradient(to right, #8bcf70, #7be0ff); }
 
+.conteiner__article--platosIndividuales {
+  height: auto; }
+
 @media (max-width: 2561px) {
   #noticiaPrincipal h1 {
     padding: 0 10%;
@@ -1168,40 +1248,6 @@ html {
     display: none; }
   .conteiner__article--propuestas {
     padding-top: 25px; } }
-
-.gradient-box, .gradient-box-green, .gradient-box-orange {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  position: relative;
-  padding: 1%;
-  box-sizing: border-box;
-  color: black;
-  background: white;
-  background-clip: padding-box;
-  /* !importanté */
-  border: solid 3px transparent;
-  /* !importanté */
-  border-radius: 1em; }
-  .gradient-box:before, .gradient-box-green:before, .gradient-box-orange:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -3px;
-    /* !importanté */
-    border-radius: inherit;
-    /* !importanté */
-    background: linear-gradient(to right, red, orange); }
-
-.gradient-box-green:before {
-  background: linear-gradient(to right, #8bcf70, #7be0ff); }
-
-.gradient-box-orange:before {
-  background: linear-gradient(to right, #ffac31, #7be0ff); }
 
 @media (min-width: 770px) {
   .col-lg-3 {
@@ -1231,16 +1277,9 @@ html {
   #pageContacto__cuerpo form textarea {
     padding: 0; }
   .cardsPlatosIndividuales {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (max-width: 769px) and (min-width: 427px) {
-  .btn {
-    font-size: 10px; }
+    grid-template-columns: repeat(2, 1fr); }
   #footer #map {
     display: none; }
-  #navbar__logo {
-    width: 190px;
-    height: 85px; }
   .conteiner__article--comofunciona h2 {
     padding-top: 17px;
     font-weight: bolder; }
@@ -1248,66 +1287,40 @@ html {
     margin: 13px 0 31px; }
   #pageComoFunciona__cuerpo div {
     margin: auto;
-    margin-bottom: 10px; }
+    margin-bottom: 10px; } }
+
+@media (max-width: 769px) and (min-width: 427px) {
+  .btn {
+    font-size: 10px; }
+  #navbar__logo {
+    width: 190px;
+    height: 85px; }
   .cardsPlatosIndividuales {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media (max-width: 426px) and (min-width: 376px) {
   .btn {
     font-size: 10px; }
-  #footer #map {
-    display: none; }
   #navbar__logo {
     width: 180px;
-    height: 90px; }
-  .conteiner__article--comofunciona h2 {
-    padding-top: 17px;
-    font-weight: bolder; }
-  .conteiner__article--comofunciona h3 {
-    margin: 13px 0 31px; }
-  #pageComoFunciona__cuerpo div {
-    margin: auto;
-    margin-bottom: 10px; } }
+    height: 90px; } }
 
 @media (max-width: 375px) and (min-width: 322px) {
   .btn {
     font-size: 10px; }
-  #footer #map {
-    display: none; }
   #navbar__logo {
     width: 150px;
-    height: 75px; }
-  .conteiner__article--comofunciona h2 {
-    padding-top: 17px;
-    font-weight: bolder; }
-  .conteiner__article--comofunciona h3 {
-    margin: 13px 0 31px; }
-  #pageComoFunciona__cuerpo div {
-    margin: auto;
-    margin-bottom: 10px; } }
-
-@media (max-width: 321px) {
-  #footer #map {
-    display: none; }
-  #navbar__logo {
-    width: 150px;
-    height: 75px; }
-  .conteiner__article--comofunciona h2 {
-    padding-top: 17px;
-    font-weight: bolder; }
-  .conteiner__article--comofunciona h3 {
-    margin: 13px 0 31px; }
-  #pageComoFunciona__cuerpo div {
-    margin: auto;
-    margin-bottom: 10px; }
-  #noticiaPrincipal {
-    min-height: 400px; } }
+    height: 75px; } }
 
 @media (max-width: 500px) {
-  .cardsExperiencia {
+  .cardExperiencias {
     grid-template-columns: 1fr; }
   .cardPlatos:hover {
     transform: scale(1, 1); } }
 
-.conteiner__article--platosIndividuales {
-  height: auto; }
+@media (max-width: 321px) {
+  #navbar__logo {
+    width: 150px;
+    height: 75px; }
+  #noticiaPrincipal {
+    min-height: 400px; } }
