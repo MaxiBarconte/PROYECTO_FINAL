@@ -109,7 +109,7 @@ html{
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF MAIN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 
 #noticiaPrincipal{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/slider01.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/slider01.jpg);
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
@@ -136,6 +136,9 @@ html{
             font-family: $tipografia-sec;
         }
         form{flex-direction: column;}
+    }
+    a{
+        margin: 55px;
     }
 }
 .conteinerPropuesta{
@@ -168,8 +171,12 @@ html{
             margin: 0;
             }
             border-radius: 10px;
-            border: 2px dashed rgba(255,103,42,1);
+            border: 2px solid rgba(255,103,42,1);
+            // border: 2px solid rgb(100, 221, 76);
+
             transform: scale(1.02);
+
+            
         }
         p{
             color: white;
@@ -384,10 +391,20 @@ html{
     section{
         div{
             a{
+                img{
+                    animation: shake-baidu 2s ease 0s infinite;
+                    animation-play-state: paused;
+                }
                 img:hover{
                     opacity:1.1;
-                    -webkit-transform:scale(1.2);transform:scale(1.2);
+                    
+
+                    animation-play-state: running;
                     cursor: pointer;
+                }
+                &:hover{
+                    -webkit-transform:scale(1.2);transform:scale(1.2);
+                    transform: scale(1.2);
                 }
             }
         }
@@ -401,18 +418,19 @@ html{
 
 // CLASES ID PAGINAS SECUNDARIAS
 .propiedadesTituloPagina{
-    
         height: 25vh;
         width: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/background_title.png);
         margin-bottom: 8%;
         h2{
-        font-family: $tipografia-sec;
+        font-family: $tipografia-prin;
+        font-weight: bold;
         color: #fff;
         font-size: $fuente-grande;
         text-align: center;
         padding: 18px;
-        margin-bottom: 150px;
+        // margin-top: 5vh;
+        margin-bottom: 10vh;
         }
 }
 .pagePlatos_main{
@@ -499,11 +517,18 @@ html{
     justify-content: center;
     flex-direction: column;
     form{
-        input{border: 2px solid black; background-color: #dfdfdf;color: black}
-        textarea{border: 2px solid black;background-color: #cecece;}
+        input{background-color: #ffffff;color: black; font-size: medium;}
+        textarea{background-color: #ffffff;font-size: medium;}
     }
-
 }
+
+
+
+
+
+
+
+
 #pageComoFunciona__cuerpo{
     display: flex;
     padding: 0% 2%;
@@ -532,10 +557,16 @@ html{
 }
 
 
-
 #footerNovedades{
     a{
-        img{margin-top: 15px;}
+        img{margin-top: 15px;
+            // animation: shake-baidu 2s ease 0s infinite;
+            // animation-play-state: paused;
+            // &:hover{
+            //     transform: scale(1.2);
+            //     animation-play-state: running;}
+        }
+    
     }
 }
 #footerWhatsapp{
@@ -614,6 +645,62 @@ html{
     }
 }
 
+#pageContacto__conteinerSocialNetwork{
+    h3{font-size: $fuente-normal;font-weight: bold;}
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    
+    section{
+        width: 50vw;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        button{
+            margin: 5%;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            width: 275px;
+            img{
+                max-width: 75px;
+                max-height: 75px;
+            }
+            
+        }
+        a{
+            text-decoration: none;
+
+        }
+    }
+}
+
+.border-gradient {
+    background: none;
+    text-decoration: inherit;
+    font-size: 1rem;
+    padding: .3rem .6rem;
+    border-radius: 5px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.border-gradient-blue {
+    border-image-source: linear-gradient(to right, #297de0, #eeaeca);
+}
+.border-gradient-green {
+    border-image-source: linear-gradient(to right, rgb(139, 207, 112), rgb(123, 224, 255));
+}
+
+
+
+
 @media (max-width: 2561px) {
     #noticiaPrincipal{
         h1{
@@ -637,6 +724,41 @@ html{
     .conteiner__article--propuestas{padding-top: 25px;}
 }
 
+.gradient-box {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    padding: 1% ;
+    box-sizing: border-box;
+    $border: 3px;
+    color: black;
+    background: white;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    border-radius: 1em;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -$border; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(to right, red, orange);
+    }
+  }
+.gradient-box-green{
+    @extend .gradient-box;
+    &:before {
+      background: linear-gradient(to right, rgb(139, 207, 112), rgb(123, 224, 255));
+    }
+}
+.gradient-box-orange{
+    @extend .gradient-box;
+    &:before {
+      background: linear-gradient(to right, rgb(255, 172, 49), rgb(123, 224, 255));
+    }
+}
 
 @media (min-width: 770px){
     .col-lg-3 {
@@ -661,6 +783,22 @@ html{
         min-width: 34vw;
         height: auto;
         height: 34vw;
+    }
+    #pageContacto__conteinerSocialNetwork{
+        flex-direction: column;
+        section{
+            width: 100vw;
+            padding: 5%;
+            button{
+                margin: 5% 0%;}
+        }
+    }
+    #pageContacto__cuerpo{
+        form{
+            textarea{
+                padding: 0;
+            }
+        }
     }    
 }        
 @media (max-width: 769px) and (min-width: 427px) {

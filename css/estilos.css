@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Modelos/Modificaciones aplicables a todo el sitio */
 .contenedorResenia {
   overflow: hidden;
@@ -591,7 +592,7 @@ html {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN MODIF NAVBAR  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF MAIN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 #noticiaPrincipal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/slider01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/slider01.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -620,6 +621,8 @@ html {
     font-family: "Nunito", sans-serif; }
   #noticiaPrincipal div form {
     flex-direction: column; }
+  #noticiaPrincipal a {
+    margin: 55px; }
 
 .conteinerPropuesta {
   display: flex;
@@ -646,7 +649,7 @@ html {
   background-size: cover; }
   .estiloCardPropuesta div:hover {
     border-radius: 10px;
-    border: 2px dashed #ff672a;
+    border: 2px solid #ff672a;
     transform: scale(1.02); }
     .estiloCardPropuesta div:hover p {
       top: 0%;
@@ -874,25 +877,32 @@ html {
     display: inline-block;
     padding: 15px;
     margin: auto; }
+  #footer section div a img {
+    animation: shake-baidu 2s ease 0s infinite;
+    animation-play-state: paused; }
   #footer section div a img:hover {
     opacity: 1.1;
+    animation-play-state: running;
+    cursor: pointer; }
+  #footer section div a:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
-    cursor: pointer; }
+    transform: scale(1.2); }
 
 /* FIN mods FOOTER  */
 .propiedadesTituloPagina {
   height: 25vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/background_title.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/background_title.png);
   margin-bottom: 8%; }
   .propiedadesTituloPagina h2 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     color: #fff;
     font-size: calc(1.4rem + 1.7vw);
     text-align: center;
     padding: 18px;
-    margin-bottom: 150px; }
+    margin-bottom: 10vh; }
 
 .pagePlatos_main {
   height: 25vh;
@@ -979,12 +989,12 @@ html {
   #pageContacto__cuerpo div {
     margin: 5%; }
   #pageContacto__cuerpo form input {
-    border: 2px solid black;
-    background-color: #dfdfdf;
-    color: black; }
+    background-color: #ffffff;
+    color: black;
+    font-size: medium; }
   #pageContacto__cuerpo form textarea {
-    border: 2px solid black;
-    background-color: #cecece; }
+    background-color: #ffffff;
+    font-size: medium; }
 
 #pageComoFunciona__cuerpo {
   display: flex;
@@ -1067,6 +1077,50 @@ html {
     margin-bottom: 25px;
     max-height: 73px; }
 
+#pageContacto__conteinerSocialNetwork {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center; }
+  #pageContacto__conteinerSocialNetwork h3 {
+    font-size: calc(0.61rem + 1.3vw);
+    font-weight: bold; }
+  #pageContacto__conteinerSocialNetwork section {
+    width: 50vw;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center; }
+    #pageContacto__conteinerSocialNetwork section button {
+      margin: 5%;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      width: 275px; }
+      #pageContacto__conteinerSocialNetwork section button img {
+        max-width: 75px;
+        max-height: 75px; }
+    #pageContacto__conteinerSocialNetwork section a {
+      text-decoration: none; }
+
+.border-gradient {
+  background: none;
+  text-decoration: inherit;
+  font-size: 1rem;
+  padding: .3rem .6rem;
+  border-radius: 5px;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px; }
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d); }
+
+.border-gradient-blue {
+  border-image-source: linear-gradient(to right, #297de0, #eeaeca); }
+
+.border-gradient-green {
+  border-image-source: linear-gradient(to right, #8bcf70, #7be0ff); }
+
 @media (max-width: 2561px) {
   #noticiaPrincipal h1 {
     padding: 0 10%;
@@ -1087,6 +1141,40 @@ html {
   .conteiner__article--propuestas {
     padding-top: 25px; } }
 
+.gradient-box, .gradient-box-green, .gradient-box-orange {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  padding: 1%;
+  box-sizing: border-box;
+  color: black;
+  background: white;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 3px transparent;
+  /* !importanté */
+  border-radius: 1em; }
+  .gradient-box:before, .gradient-box-green:before, .gradient-box-orange:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: linear-gradient(to right, red, orange); }
+
+.gradient-box-green:before {
+  background: linear-gradient(to right, #8bcf70, #7be0ff); }
+
+.gradient-box-orange:before {
+  background: linear-gradient(to right, #ffac31, #7be0ff); }
+
 @media (min-width: 770px) {
   .col-lg-3 {
     flex: 0 0 auto;
@@ -1104,7 +1192,16 @@ html {
   .estiloCardPropuesta div {
     min-width: 34vw;
     height: auto;
-    height: 34vw; } }
+    height: 34vw; }
+  #pageContacto__conteinerSocialNetwork {
+    flex-direction: column; }
+    #pageContacto__conteinerSocialNetwork section {
+      width: 100vw;
+      padding: 5%; }
+      #pageContacto__conteinerSocialNetwork section button {
+        margin: 5% 0%; }
+  #pageContacto__cuerpo form textarea {
+    padding: 0; } }
 
 @media (max-width: 769px) and (min-width: 427px) {
   .btn {
