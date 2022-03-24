@@ -1,4 +1,0 @@
-Colores alternativos
-// $color-2:#ECAC00;
-// $color-2:#fa9c31fb;
-// $color-1:#00BFA6;
