@@ -1102,6 +1102,34 @@ html {
     #pageContacto__conteinerSocialNetwork section a {
       text-decoration: none; }
 
+.containerPlatosIndividuales {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 150px; }
+
+.cardsPlatosIndividuales {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem; }
+  .cardsPlatosIndividuales div img {
+    width: 100%;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    max-height: 223px; }
+  .cardsPlatosIndividuales p {
+    font-size: calc(0.61rem + .5vw); }
+  .cardsPlatosIndividuales .card-socials img {
+    width: 50px;
+    box-shadow: none;
+    margin-bottom: 25px;
+    max-height: 73px; }
+
 .border-gradient {
   background: none;
   text-decoration: inherit;
