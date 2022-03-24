@@ -1,9 +1,8 @@
 /* Modelos/Modificaciones aplicables a todo el sitio */
 
-// @import 'card';
 @import 'animation';
 @import 'variables';
-
+@import 'fuentes';
 html{
     font-size: 62,5%;
 }
@@ -22,6 +21,11 @@ html{
     box-sizing: border-box;
     font-family: $tipografia-prin;
     scroll-behavior: smooth;
+}
+
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 
@@ -147,7 +151,6 @@ html{
 .propTextoTituloPrincipal--efectoEscribir {
     font-weight: bold;
     color: $color-1;
-    // text-decoration:underline;
 }
 .conteinerPropuesta{
     display: flex;
@@ -410,7 +413,6 @@ html{
                 img:hover{
                     opacity:1.1;
                     
-
                     animation-play-state: running;
                     cursor: pointer;
                 }
@@ -441,7 +443,6 @@ html{
         font-size: $fuente-grande;
         text-align: center;
         padding: 18px;
-        // margin-top: 5vh;
         margin-bottom: 10vh;
         }
 }
@@ -590,23 +591,10 @@ html{
 }
 
 
-
-
-*, *:before, *:after {
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-
-
 #footerNovedades{
     a{
         img{margin-top: 15px;
-            // animation: shake-baidu 2s ease 0s infinite;
-            // animation-play-state: paused;
-            // &:hover{
-            //     transform: scale(1.2);
-            //     animation-play-state: running;}
         }
-    
     }
 }
 #footerWhatsapp{
@@ -675,16 +663,16 @@ html{
     $border: 3px;
     color: black;
     background: white;
-    background-clip: padding-box; /* !importanté */
-    border: solid $border transparent; /* !importanté */
+    background-clip: padding-box; 
+    border: solid $border transparent;
     border-radius: 1em;
     &:before {
         content: '';
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         z-index: -1;
-        margin: -$border; /* !importanté */
-        border-radius: inherit; /* !importanté */
+        margin: -$border;
+        border-radius: inherit;
         background: linear-gradient(to right, red, orange);
     }
 }
@@ -908,9 +896,9 @@ html{
     grid-template-columns: 1fr;
     }
     .cardPlatos{
-    &:hover {
-        transform: scale(1, 1);
-    }
+        &:hover {
+            transform: scale(1, 1);
+        }
     }
 }
 @media (max-width: 321px) {
