@@ -1,9 +1,9 @@
 var typed = new Typed('.typed', {
 	strings: [
+		'<i class="propTextoTituloPrincipal--efectoEscribir">Rapido</i>',
 		'<i class="propTextoTituloPrincipal--efectoEscribir">Facil</i>',
 		'<i class="propTextoTituloPrincipal--efectoEscribir">Rico</i>',
-		'<i class="propTextoTituloPrincipal--efectoEscribir">Rapido</i>',
-		'<i class="propTextoTituloPrincipal--efectoEscribir">Kinowa :)</i>',
+		'<i class="propTextoTituloPrincipal--efectoEscribir">Kinowa</i>',
 	],
 	stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 75, // Velocidad en mlisegundos para poner una letra,

@@ -592,7 +592,7 @@ html {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIN MODIF NAVBAR  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  INICIO MODIF MAIN  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 #noticiaPrincipal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/slider01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/slider01.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -611,7 +611,10 @@ html {
     display: block;
     align-items: center;
     justify-content: center;
-    margin: 50% 10px; }
+    margin: 50% 10px;
+    padding: 0 6%;
+    margin-top: 11%;
+    margin-bottom: 3%; }
   #noticiaPrincipal div p {
     display: flex;
     justify-content: space-around;
@@ -626,8 +629,7 @@ html {
 
 .propTextoTituloPrincipal--efectoEscribir {
   font-weight: bold;
-  color: #2EA37E;
-  text-decoration: underline; }
+  color: #2EA37E; }
 
 .conteinerPropuesta {
   display: flex;
@@ -1228,12 +1230,6 @@ html {
 
 .conteiner__article--platosIndividuales {
   height: auto; }
-
-@media (max-width: 2561px) {
-  #noticiaPrincipal h1 {
-    padding: 0 10%;
-    margin-top: 11%;
-    margin-bottom: 3%; } }
 
 @media (max-width: 1130px) and (min-width: 1026px) {
   .our-team {
